@@ -1,0 +1,1473 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F0110241F98B18A00D39708 /* NIST_PaymentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0110231F98B18A00D39708 /* NIST_PaymentTableViewCell.m */; };
+		0F0110271F98B1A500D39708 /* NIST_PayeeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0110261F98B1A500D39708 /* NIST_PayeeTableViewCell.m */; };
+		0F0263D51F96FF2300DE57B3 /* NIST_VerificationCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0263D41F96FF2300DE57B3 /* NIST_VerificationCodeView.m */; };
+		0F0263D91F973A2700DE57B3 /* NIST_SetPINController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0263D81F973A2700DE57B3 /* NIST_SetPINController.m */; };
+		0F0263DC1F973A4500DE57B3 /* NIST_LaunchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0263DB1F973A4500DE57B3 /* NIST_LaunchController.m */; };
+		0F0263DF1F973C5E00DE57B3 /* NIST_PayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0263DE1F973C5E00DE57B3 /* NIST_PayController.m */; };
+		0F0263E21F973C9700DE57B3 /* NIST_RechargeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0263E11F973C9700DE57B3 /* NIST_RechargeController.m */; };
+		0F0263E51F973CC100DE57B3 /* NIST_TiedCardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0263E41F973CC100DE57B3 /* NIST_TiedCardController.m */; };
+		0F0E98881F999F63005884B2 /* NIST_InputView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F0E98871F999F63005884B2 /* NIST_InputView.m */; };
+		0F158A561F95A1B4009D1FCF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F158A551F95A1B4009D1FCF /* main.m */; };
+		0F158A5C1F95A1B4009D1FCF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F158A5B1F95A1B4009D1FCF /* ViewController.m */; };
+		0F158A5F1F95A1B4009D1FCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F158A5D1F95A1B4009D1FCF /* Main.storyboard */; };
+		0F158A641F95A1B4009D1FCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F158A621F95A1B4009D1FCF /* LaunchScreen.storyboard */; };
+		0F158A6F1F95A1B4009D1FCF /* WhiteBoxDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F158A6E1F95A1B4009D1FCF /* WhiteBoxDemoTests.m */; };
+		0F158A7A1F95A1B4009D1FCF /* WhiteBoxDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F158A791F95A1B4009D1FCF /* WhiteBoxDemoUITests.m */; };
+		0F189DCD1FA3151200888800 /* circle-slash.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F189DC51FA3151200888800 /* circle-slash.png */; };
+		0F189DCE1FA3151200888800 /* circle-slash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F189DC61FA3151200888800 /* circle-slash@2x.png */; };
+		0F189DCF1FA3151200888800 /* done-fail.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F189DC71FA3151200888800 /* done-fail.png */; };
+		0F189DD01FA3151200888800 /* done-fail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F189DC81FA3151200888800 /* done-fail@2x.png */; };
+		0F189DD11FA3151200888800 /* done-good.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F189DC91FA3151200888800 /* done-good.png */; };
+		0F189DD21FA3151200888800 /* done-good@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0F189DCA1FA3151200888800 /* done-good@2x.png */; };
+		0F189DD31FA3151200888800 /* HYProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F189DCC1FA3151200888800 /* HYProgressHUD.m */; };
+		0F189DD61FA3158200888800 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F189DD51FA3158200888800 /* Tool.m */; };
+		0F3300BB2015D2800030D0E3 /* NIST_BusinessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3300BA2015D2800030D0E3 /* NIST_BusinessViewController.m */; };
+		0F3300BE2015D2DA0030D0E3 /* NIST_BusinessTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3300BD2015D2DA0030D0E3 /* NIST_BusinessTableViewCell.m */; };
+		0F3DD27B1FFF4401006385D7 /* NIST_SecretKeyNegotiationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F3DD27A1FFF4401006385D7 /* NIST_SecretKeyNegotiationVC.m */; };
+		0F8424821F95FEC80043FA21 /* NIST_PasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8424811F95FEC80043FA21 /* NIST_PasswordView.m */; };
+		0F84248C1F9615EB0043FA21 /* NSString+NIST.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F84248B1F9615EB0043FA21 /* NSString+NIST.m */; };
+		0F8424901F96173A0043FA21 /* NIST_LaunchFinishController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F84248F1F96173A0043FA21 /* NIST_LaunchFinishController.m */; };
+		0F8424931F9620350043FA21 /* NIST_LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8424921F9620350043FA21 /* NIST_LoginController.m */; };
+		0F8424961F9620490043FA21 /* NIST_RegistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8424951F9620490043FA21 /* NIST_RegistController.m */; };
+		0F8424991F962BCE0043FA21 /* NIST_BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8424981F962BCE0043FA21 /* NIST_BaseViewController.m */; };
+		0F8424A11F962F480043FA21 /* NIST_HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8424A01F962F480043FA21 /* NIST_HomeViewController.m */; };
+		0F8424A41F962F9D0043FA21 /* NIST_HomeCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8424A31F962F9D0043FA21 /* NIST_HomeCollectionCell.m */; };
+		0F8424AE1F963C140043FA21 /* NIST_OptVerifyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8424AD1F963C140043FA21 /* NIST_OptVerifyController.m */; };
+		0F8424B11F963C310043FA21 /* NIST_RebindController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8424B01F963C310043FA21 /* NIST_RebindController.m */; };
+		0FA8864B1FE26A1C00FB7D71 /* libNIST_WB_SMX.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FA8864A1FE26A1C00FB7D71 /* libNIST_WB_SMX.a */; };
+		0FA8866C1FE2731A00FB7D71 /* NIST_Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA8864F1FE2731A00FB7D71 /* NIST_Tool.m */; };
+		0FA8866D1FE2731A00FB7D71 /* zclientsdk.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886541FE2731A00FB7D71 /* zclientsdk.c */; };
+		0FA8866E1FE2731A00FB7D71 /* zclientwk.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886551FE2731A00FB7D71 /* zclientwk.c */; };
+		0FA8866F1FE2731A00FB7D71 /* zcom.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886581FE2731A00FB7D71 /* zcom.c */; };
+		0FA886711FE2731A00FB7D71 /* NIST_UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA8865E1FE2731A00FB7D71 /* NIST_UUID.m */; };
+		0FA886721FE2731A00FB7D71 /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA8865F1FE2731A00FB7D71 /* UICKeyChainStore.m */; };
+		0FA886741FE2731A00FB7D71 /* NIST_WB_SDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886611FE2731A00FB7D71 /* NIST_WB_SDK.m */; };
+		0FA886751FE2731A00FB7D71 /* NIST_Read_Write.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886621FE2731A00FB7D71 /* NIST_Read_Write.m */; };
+		0FA886761FE2731A00FB7D71 /* NIST_WB_SDK_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886631FE2731A00FB7D71 /* NIST_WB_SDK_Model.m */; };
+		0FA886771FE2731A00FB7D71 /* NIST_Device_Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886641FE2731A00FB7D71 /* NIST_Device_Info.m */; };
+		0FA886801FE290E700FB7D71 /* NIST_SSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886601FE2731A00FB7D71 /* NIST_SSL.m */; };
+		0FA886811FE2912D00FB7D71 /* NIST_TransferController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F01101A1F988E3300D39708 /* NIST_TransferController.m */; };
+		0FA886841FE29CEE00FB7D71 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FA886831FE29CEE00FB7D71 /* CoreTelephony.framework */; };
+		0FA886A91FE2B41C00FB7D71 /* NIST_GCDErrorManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA8868B1FE2B41B00FB7D71 /* NIST_GCDErrorManager.m */; };
+		0FA886AA1FE2B41C00FB7D71 /* NIST_GCDAsyncSocketManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886911FE2B41B00FB7D71 /* NIST_GCDAsyncSocketManager.m */; };
+		0FA886AB1FE2B41C00FB7D71 /* NIST_GCDAsyncSocketCommunicationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886921FE2B41B00FB7D71 /* NIST_GCDAsyncSocketCommunicationManager.m */; };
+		0FA886AC1FE2B41C00FB7D71 /* NIST_GCDKeyChainManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886961FE2B41B00FB7D71 /* NIST_GCDKeyChainManager.m */; };
+		0FA886AD1FE2B41C00FB7D71 /* NIST_GCDAsyncSocketRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886981FE2B41B00FB7D71 /* NIST_GCDAsyncSocketRequestModel.m */; };
+		0FA886AE1FE2B41C00FB7D71 /* NIST_GCDAsyncSocketResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA8869D1FE2B41B00FB7D71 /* NIST_GCDAsyncSocketResponseModel.m */; };
+		0FA886AF1FE2B41C00FB7D71 /* NIST_GCDAsyncSocketRequestElementModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA8869E1FE2B41B00FB7D71 /* NIST_GCDAsyncSocketRequestElementModel.m */; };
+		0FA886B01FE2B41C00FB7D71 /* NIST_GCDConnectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA8869F1FE2B41B00FB7D71 /* NIST_GCDConnectConfig.m */; };
+		0FA886B11FE2B41C00FB7D71 /* XMLDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886A21FE2B41B00FB7D71 /* XMLDictionary.m */; };
+		0FA886B21FE2B41C00FB7D71 /* XMLReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886A51FE2B41B00FB7D71 /* XMLReader.m */; };
+		0FA886B31FE2B41C00FB7D71 /* XMLWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886A71FE2B41B00FB7D71 /* XMLWriter.m */; };
+		0FBBB24B1F95AAB50095B8BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBBB2481F95AAB50095B8BA /* AppDelegate.m */; };
+		0FBBB24C1F95AAB50095B8BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FBBB24A1F95AAB50095B8BA /* Assets.xcassets */; };
+		0FBBB2531F95E2C20095B8BA /* NIST_HeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBBB2521F95E2C20095B8BA /* NIST_HeadView.m */; };
+		0FBBB2561F95E7CE0095B8BA /* NIST_CheckView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FBBB2551F95E7CE0095B8BA /* NIST_CheckView.m */; };
+		28D2A2386BD792FE980D4B5C /* libPods-WhiteBoxDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87A79FF8633F693C938C92C7 /* libPods-WhiteBoxDemoTests.a */; };
+		37A3FF9717ED9C9BF7541854 /* libPods-WhiteBoxDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73931CF66FBE41A2832DF940 /* libPods-WhiteBoxDemoUITests.a */; };
+		F1E8935B653DB5D2EA42B61A /* libPods-WhiteBoxDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 233CEBC76576B2B1C6055AD4 /* libPods-WhiteBoxDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0F158A6B1F95A1B4009D1FCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F158A491F95A1B4009D1FCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F158A501F95A1B4009D1FCF;
+			remoteInfo = WhiteBoxDemo;
+		};
+		0F158A761F95A1B4009D1FCF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F158A491F95A1B4009D1FCF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F158A501F95A1B4009D1FCF;
+			remoteInfo = WhiteBoxDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		081987E5F37D2ED9F86A0A81 /* Pods-WhiteBoxDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteBoxDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhiteBoxDemo/Pods-WhiteBoxDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		0F0110191F988E3300D39708 /* NIST_TransferController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_TransferController.h; sourceTree = "<group>"; };
+		0F01101A1F988E3300D39708 /* NIST_TransferController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_TransferController.m; sourceTree = "<group>"; };
+		0F0110221F98B18A00D39708 /* NIST_PaymentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_PaymentTableViewCell.h; sourceTree = "<group>"; };
+		0F0110231F98B18A00D39708 /* NIST_PaymentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_PaymentTableViewCell.m; sourceTree = "<group>"; };
+		0F0110251F98B1A500D39708 /* NIST_PayeeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_PayeeTableViewCell.h; sourceTree = "<group>"; };
+		0F0110261F98B1A500D39708 /* NIST_PayeeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_PayeeTableViewCell.m; sourceTree = "<group>"; };
+		0F0263D31F96FF2300DE57B3 /* NIST_VerificationCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_VerificationCodeView.h; sourceTree = "<group>"; };
+		0F0263D41F96FF2300DE57B3 /* NIST_VerificationCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_VerificationCodeView.m; sourceTree = "<group>"; };
+		0F0263D71F973A2700DE57B3 /* NIST_SetPINController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_SetPINController.h; sourceTree = "<group>"; };
+		0F0263D81F973A2700DE57B3 /* NIST_SetPINController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_SetPINController.m; sourceTree = "<group>"; };
+		0F0263DA1F973A4500DE57B3 /* NIST_LaunchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_LaunchController.h; sourceTree = "<group>"; };
+		0F0263DB1F973A4500DE57B3 /* NIST_LaunchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_LaunchController.m; sourceTree = "<group>"; };
+		0F0263DD1F973C5E00DE57B3 /* NIST_PayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_PayController.h; sourceTree = "<group>"; };
+		0F0263DE1F973C5E00DE57B3 /* NIST_PayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_PayController.m; sourceTree = "<group>"; };
+		0F0263E01F973C9700DE57B3 /* NIST_RechargeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_RechargeController.h; sourceTree = "<group>"; };
+		0F0263E11F973C9700DE57B3 /* NIST_RechargeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_RechargeController.m; sourceTree = "<group>"; };
+		0F0263E31F973CC100DE57B3 /* NIST_TiedCardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_TiedCardController.h; sourceTree = "<group>"; };
+		0F0263E41F973CC100DE57B3 /* NIST_TiedCardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_TiedCardController.m; sourceTree = "<group>"; };
+		0F0E98861F999F63005884B2 /* NIST_InputView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_InputView.h; sourceTree = "<group>"; };
+		0F0E98871F999F63005884B2 /* NIST_InputView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_InputView.m; sourceTree = "<group>"; };
+		0F158A511F95A1B4009D1FCF /* WhiteBoxDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhiteBoxDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F158A551F95A1B4009D1FCF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0F158A5A1F95A1B4009D1FCF /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0F158A5B1F95A1B4009D1FCF /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0F158A5E1F95A1B4009D1FCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0F158A631F95A1B4009D1FCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0F158A651F95A1B4009D1FCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F158A6A1F95A1B4009D1FCF /* WhiteBoxDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiteBoxDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F158A6E1F95A1B4009D1FCF /* WhiteBoxDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhiteBoxDemoTests.m; sourceTree = "<group>"; };
+		0F158A701F95A1B4009D1FCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F158A751F95A1B4009D1FCF /* WhiteBoxDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhiteBoxDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F158A791F95A1B4009D1FCF /* WhiteBoxDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhiteBoxDemoUITests.m; sourceTree = "<group>"; };
+		0F158A7B1F95A1B4009D1FCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F189DC51FA3151200888800 /* circle-slash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-slash.png"; sourceTree = "<group>"; };
+		0F189DC61FA3151200888800 /* circle-slash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "circle-slash@2x.png"; sourceTree = "<group>"; };
+		0F189DC71FA3151200888800 /* done-fail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done-fail.png"; sourceTree = "<group>"; };
+		0F189DC81FA3151200888800 /* done-fail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done-fail@2x.png"; sourceTree = "<group>"; };
+		0F189DC91FA3151200888800 /* done-good.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done-good.png"; sourceTree = "<group>"; };
+		0F189DCA1FA3151200888800 /* done-good@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "done-good@2x.png"; sourceTree = "<group>"; };
+		0F189DCB1FA3151200888800 /* HYProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYProgressHUD.h; sourceTree = "<group>"; };
+		0F189DCC1FA3151200888800 /* HYProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYProgressHUD.m; sourceTree = "<group>"; };
+		0F189DD41FA3158200888800 /* Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
+		0F189DD51FA3158200888800 /* Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
+		0F3300B92015D2800030D0E3 /* NIST_BusinessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NIST_BusinessViewController.h; sourceTree = "<group>"; };
+		0F3300BA2015D2800030D0E3 /* NIST_BusinessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NIST_BusinessViewController.m; sourceTree = "<group>"; };
+		0F3300BC2015D2DA0030D0E3 /* NIST_BusinessTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NIST_BusinessTableViewCell.h; sourceTree = "<group>"; };
+		0F3300BD2015D2DA0030D0E3 /* NIST_BusinessTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NIST_BusinessTableViewCell.m; sourceTree = "<group>"; };
+		0F3DD2791FFF4401006385D7 /* NIST_SecretKeyNegotiationVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NIST_SecretKeyNegotiationVC.h; sourceTree = "<group>"; };
+		0F3DD27A1FFF4401006385D7 /* NIST_SecretKeyNegotiationVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NIST_SecretKeyNegotiationVC.m; sourceTree = "<group>"; };
+		0F8424801F95FEC80043FA21 /* NIST_PasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_PasswordView.h; sourceTree = "<group>"; };
+		0F8424811F95FEC80043FA21 /* NIST_PasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_PasswordView.m; sourceTree = "<group>"; };
+		0F84248A1F9615EB0043FA21 /* NSString+NIST.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+NIST.h"; sourceTree = "<group>"; };
+		0F84248B1F9615EB0043FA21 /* NSString+NIST.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+NIST.m"; sourceTree = "<group>"; };
+		0F84248E1F96173A0043FA21 /* NIST_LaunchFinishController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_LaunchFinishController.h; sourceTree = "<group>"; };
+		0F84248F1F96173A0043FA21 /* NIST_LaunchFinishController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_LaunchFinishController.m; sourceTree = "<group>"; };
+		0F8424911F9620350043FA21 /* NIST_LoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_LoginController.h; sourceTree = "<group>"; };
+		0F8424921F9620350043FA21 /* NIST_LoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_LoginController.m; sourceTree = "<group>"; };
+		0F8424941F9620490043FA21 /* NIST_RegistController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_RegistController.h; sourceTree = "<group>"; };
+		0F8424951F9620490043FA21 /* NIST_RegistController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_RegistController.m; sourceTree = "<group>"; };
+		0F8424971F962BCE0043FA21 /* NIST_BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_BaseViewController.h; sourceTree = "<group>"; };
+		0F8424981F962BCE0043FA21 /* NIST_BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_BaseViewController.m; sourceTree = "<group>"; };
+		0F84249F1F962F480043FA21 /* NIST_HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_HomeViewController.h; sourceTree = "<group>"; };
+		0F8424A01F962F480043FA21 /* NIST_HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_HomeViewController.m; sourceTree = "<group>"; };
+		0F8424A21F962F9D0043FA21 /* NIST_HomeCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_HomeCollectionCell.h; sourceTree = "<group>"; };
+		0F8424A31F962F9D0043FA21 /* NIST_HomeCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_HomeCollectionCell.m; sourceTree = "<group>"; };
+		0F8424AC1F963C140043FA21 /* NIST_OptVerifyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_OptVerifyController.h; sourceTree = "<group>"; };
+		0F8424AD1F963C140043FA21 /* NIST_OptVerifyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_OptVerifyController.m; sourceTree = "<group>"; };
+		0F8424AF1F963C310043FA21 /* NIST_RebindController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_RebindController.h; sourceTree = "<group>"; };
+		0F8424B01F963C310043FA21 /* NIST_RebindController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_RebindController.m; sourceTree = "<group>"; };
+		0FA8864A1FE26A1C00FB7D71 /* libNIST_WB_SMX.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libNIST_WB_SMX.a; path = "WhiteBoxDemo/SDK(白盒SDK)/WB_SDK(白盒SDK)/NIST_WB_SDK/miracl-lib-arm64-X86_64/libNIST_WB_SMX.a"; sourceTree = "<group>"; };
+		0FA8864E1FE2731A00FB7D71 /* NIST_Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_Tool.h; sourceTree = "<group>"; };
+		0FA8864F1FE2731A00FB7D71 /* NIST_Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_Tool.m; sourceTree = "<group>"; };
+		0FA886531FE2731A00FB7D71 /* zcom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zcom.h; sourceTree = "<group>"; };
+		0FA886541FE2731A00FB7D71 /* zclientsdk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zclientsdk.c; sourceTree = "<group>"; };
+		0FA886551FE2731A00FB7D71 /* zclientwk.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zclientwk.c; sourceTree = "<group>"; };
+		0FA886561FE2731A00FB7D71 /* zalglib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zalglib.h; sourceTree = "<group>"; };
+		0FA886571FE2731A00FB7D71 /* ztype.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ztype.h; sourceTree = "<group>"; };
+		0FA886581FE2731A00FB7D71 /* zcom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zcom.c; sourceTree = "<group>"; };
+		0FA8865D1FE2731A00FB7D71 /* NIST_WB_SDK_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_WB_SDK_Header.h; sourceTree = "<group>"; };
+		0FA8865E1FE2731A00FB7D71 /* NIST_UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_UUID.m; sourceTree = "<group>"; };
+		0FA8865F1FE2731A00FB7D71 /* UICKeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICKeyChainStore.m; sourceTree = "<group>"; };
+		0FA886601FE2731A00FB7D71 /* NIST_SSL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_SSL.m; sourceTree = "<group>"; };
+		0FA886611FE2731A00FB7D71 /* NIST_WB_SDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_WB_SDK.m; sourceTree = "<group>"; };
+		0FA886621FE2731A00FB7D71 /* NIST_Read_Write.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_Read_Write.m; sourceTree = "<group>"; };
+		0FA886631FE2731A00FB7D71 /* NIST_WB_SDK_Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_WB_SDK_Model.m; sourceTree = "<group>"; };
+		0FA886641FE2731A00FB7D71 /* NIST_Device_Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_Device_Info.m; sourceTree = "<group>"; };
+		0FA886651FE2731A00FB7D71 /* NIST_UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_UUID.h; sourceTree = "<group>"; };
+		0FA886661FE2731A00FB7D71 /* NIST_SSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_SSL.h; sourceTree = "<group>"; };
+		0FA886671FE2731A00FB7D71 /* UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICKeyChainStore.h; sourceTree = "<group>"; };
+		0FA886681FE2731A00FB7D71 /* NIST_Read_Write.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_Read_Write.h; sourceTree = "<group>"; };
+		0FA886691FE2731A00FB7D71 /* NIST_WB_SDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_WB_SDK.h; sourceTree = "<group>"; };
+		0FA8866A1FE2731A00FB7D71 /* NIST_Device_Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_Device_Info.h; sourceTree = "<group>"; };
+		0FA8866B1FE2731A00FB7D71 /* NIST_WB_SDK_Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_WB_SDK_Model.h; sourceTree = "<group>"; };
+		0FA886781FE2736C00FB7D71 /* sm2alg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sm2alg.h; path = "WhiteBoxDemo/SDK(白盒SDK)/WB_SDK(白盒SDK)/NIST_WB_SDK/miracl-lib-arm64-X86_64/sm2alg.h"; sourceTree = SOURCE_ROOT; };
+		0FA8867E1FE286FE00FB7D71 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
+		0FA886831FE29CEE00FB7D71 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		0FA8868B1FE2B41B00FB7D71 /* NIST_GCDErrorManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_GCDErrorManager.m; sourceTree = "<group>"; };
+		0FA8868C1FE2B41B00FB7D71 /* NIST_GCDErrorManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_GCDErrorManager.h; sourceTree = "<group>"; };
+		0FA8868E1FE2B41B00FB7D71 /* NIST_GCDSocketConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_GCDSocketConfig.h; sourceTree = "<group>"; };
+		0FA886901FE2B41B00FB7D71 /* NIST_GCDAsyncSocketCommunicationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_GCDAsyncSocketCommunicationManager.h; sourceTree = "<group>"; };
+		0FA886911FE2B41B00FB7D71 /* NIST_GCDAsyncSocketManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_GCDAsyncSocketManager.m; sourceTree = "<group>"; };
+		0FA886921FE2B41B00FB7D71 /* NIST_GCDAsyncSocketCommunicationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_GCDAsyncSocketCommunicationManager.m; sourceTree = "<group>"; };
+		0FA886931FE2B41B00FB7D71 /* NIST_GCDAsyncSocketManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_GCDAsyncSocketManager.h; sourceTree = "<group>"; };
+		0FA886951FE2B41B00FB7D71 /* NIST_GCDKeyChainManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_GCDKeyChainManager.h; sourceTree = "<group>"; };
+		0FA886961FE2B41B00FB7D71 /* NIST_GCDKeyChainManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_GCDKeyChainManager.m; sourceTree = "<group>"; };
+		0FA886981FE2B41B00FB7D71 /* NIST_GCDAsyncSocketRequestModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_GCDAsyncSocketRequestModel.m; sourceTree = "<group>"; };
+		0FA886991FE2B41B00FB7D71 /* NIST_GCDAsyncSocketResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_GCDAsyncSocketResponseModel.h; sourceTree = "<group>"; };
+		0FA8869A1FE2B41B00FB7D71 /* NIST_GCDConnectConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_GCDConnectConfig.h; sourceTree = "<group>"; };
+		0FA8869B1FE2B41B00FB7D71 /* NIST_GCDAsyncSocketRequestElementModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_GCDAsyncSocketRequestElementModel.h; sourceTree = "<group>"; };
+		0FA8869C1FE2B41B00FB7D71 /* NIST_GCDAsyncSocketRequestModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_GCDAsyncSocketRequestModel.h; sourceTree = "<group>"; };
+		0FA8869D1FE2B41B00FB7D71 /* NIST_GCDAsyncSocketResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_GCDAsyncSocketResponseModel.m; sourceTree = "<group>"; };
+		0FA8869E1FE2B41B00FB7D71 /* NIST_GCDAsyncSocketRequestElementModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_GCDAsyncSocketRequestElementModel.m; sourceTree = "<group>"; };
+		0FA8869F1FE2B41B00FB7D71 /* NIST_GCDConnectConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_GCDConnectConfig.m; sourceTree = "<group>"; };
+		0FA886A11FE2B41B00FB7D71 /* XMLDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLDictionary.h; sourceTree = "<group>"; };
+		0FA886A21FE2B41B00FB7D71 /* XMLDictionary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLDictionary.m; sourceTree = "<group>"; };
+		0FA886A41FE2B41B00FB7D71 /* XMLReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLReader.h; sourceTree = "<group>"; };
+		0FA886A51FE2B41B00FB7D71 /* XMLReader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLReader.m; sourceTree = "<group>"; };
+		0FA886A71FE2B41B00FB7D71 /* XMLWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMLWriter.m; sourceTree = "<group>"; };
+		0FA886A81FE2B41B00FB7D71 /* XMLWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLWriter.h; sourceTree = "<group>"; };
+		0FBBB2471F95AAB50095B8BA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0FBBB2481F95AAB50095B8BA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0FBBB24A1F95AAB50095B8BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0FBBB24D1F95AAD40095B8BA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		0FBBB2511F95E2C20095B8BA /* NIST_HeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_HeadView.h; sourceTree = "<group>"; };
+		0FBBB2521F95E2C20095B8BA /* NIST_HeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_HeadView.m; sourceTree = "<group>"; };
+		0FBBB2541F95E7CE0095B8BA /* NIST_CheckView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_CheckView.h; sourceTree = "<group>"; };
+		0FBBB2551F95E7CE0095B8BA /* NIST_CheckView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_CheckView.m; sourceTree = "<group>"; };
+		233CEBC76576B2B1C6055AD4 /* libPods-WhiteBoxDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhiteBoxDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		528FF1F9B2C948C9BA3B452D /* Pods-WhiteBoxDemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteBoxDemoUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhiteBoxDemoUITests/Pods-WhiteBoxDemoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		540B77F759E69FFEFE88B561 /* Pods-WhiteBoxDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteBoxDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhiteBoxDemoTests/Pods-WhiteBoxDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		6DC20001B19AA5566FB8C782 /* Pods-WhiteBoxDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteBoxDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhiteBoxDemoUITests/Pods-WhiteBoxDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6EA94CB8EA3F51874FEA6BDB /* Pods-WhiteBoxDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteBoxDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-WhiteBoxDemo/Pods-WhiteBoxDemo.release.xcconfig"; sourceTree = "<group>"; };
+		73931CF66FBE41A2832DF940 /* libPods-WhiteBoxDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhiteBoxDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87A79FF8633F693C938C92C7 /* libPods-WhiteBoxDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WhiteBoxDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F1BA4F9C2CE9F97BFD0ECA9 /* Pods-WhiteBoxDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhiteBoxDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WhiteBoxDemoTests/Pods-WhiteBoxDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0F158A4E1F95A1B4009D1FCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FA886841FE29CEE00FB7D71 /* CoreTelephony.framework in Frameworks */,
+				0FA8864B1FE26A1C00FB7D71 /* libNIST_WB_SMX.a in Frameworks */,
+				F1E8935B653DB5D2EA42B61A /* libPods-WhiteBoxDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F158A671F95A1B4009D1FCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28D2A2386BD792FE980D4B5C /* libPods-WhiteBoxDemoTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F158A721F95A1B4009D1FCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37A3FF9717ED9C9BF7541854 /* libPods-WhiteBoxDemoUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0607D7D789919C9B0F780DB6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				081987E5F37D2ED9F86A0A81 /* Pods-WhiteBoxDemo.debug.xcconfig */,
+				6EA94CB8EA3F51874FEA6BDB /* Pods-WhiteBoxDemo.release.xcconfig */,
+				8F1BA4F9C2CE9F97BFD0ECA9 /* Pods-WhiteBoxDemoTests.debug.xcconfig */,
+				540B77F759E69FFEFE88B561 /* Pods-WhiteBoxDemoTests.release.xcconfig */,
+				6DC20001B19AA5566FB8C782 /* Pods-WhiteBoxDemoUITests.debug.xcconfig */,
+				528FF1F9B2C948C9BA3B452D /* Pods-WhiteBoxDemoUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		0F0110171F988E3300D39708 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0F0110221F98B18A00D39708 /* NIST_PaymentTableViewCell.h */,
+				0F0110231F98B18A00D39708 /* NIST_PaymentTableViewCell.m */,
+				0F0110251F98B1A500D39708 /* NIST_PayeeTableViewCell.h */,
+				0F0110261F98B1A500D39708 /* NIST_PayeeTableViewCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0F0110181F988E3300D39708 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0F0110191F988E3300D39708 /* NIST_TransferController.h */,
+				0F01101A1F988E3300D39708 /* NIST_TransferController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0F0263D61F9739FC00DE57B3 /* SetPIN(设置PIN码) */ = {
+			isa = PBXGroup;
+			children = (
+				0F0263D71F973A2700DE57B3 /* NIST_SetPINController.h */,
+				0F0263D81F973A2700DE57B3 /* NIST_SetPINController.m */,
+			);
+			path = "SetPIN(设置PIN码)";
+			sourceTree = "<group>";
+		};
+		0F158A481F95A1B4009D1FCF = {
+			isa = PBXGroup;
+			children = (
+				0F158A531F95A1B4009D1FCF /* WhiteBoxDemo */,
+				0F158A6D1F95A1B4009D1FCF /* WhiteBoxDemoTests */,
+				0F158A781F95A1B4009D1FCF /* WhiteBoxDemoUITests */,
+				0F158A521F95A1B4009D1FCF /* Products */,
+				0607D7D789919C9B0F780DB6 /* Pods */,
+				58A33B1C9893783DBF2B3DC9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		0F158A521F95A1B4009D1FCF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0F158A511F95A1B4009D1FCF /* WhiteBoxDemo.app */,
+				0F158A6A1F95A1B4009D1FCF /* WhiteBoxDemoTests.xctest */,
+				0F158A751F95A1B4009D1FCF /* WhiteBoxDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0F158A531F95A1B4009D1FCF /* WhiteBoxDemo */ = {
+			isa = PBXGroup;
+			children = (
+				0FA885C01FE2614A00FB7D71 /* SocketManager(socket通信工具) */,
+				0FA8864C1FE2731A00FB7D71 /* SDK(白盒SDK) */,
+				0F3300B82015D25A0030D0E3 /* Business(模拟业务) */,
+				0F3DD2771FFF43C1006385D7 /* SecretKeyNegotiation(秘钥协商) */,
+				0F189DC31FA3151200888800 /* Libraries(第三方库) */,
+				0F0263D61F9739FC00DE57B3 /* SetPIN(设置PIN码) */,
+				0F8424A91F963BEE0043FA21 /* OPTVerify(OPT验证) */,
+				0F8424AA1F963BEE0043FA21 /* Rebind(重新绑定) */,
+				0F8424A51F9632D70043FA21 /* Pay(支付) */,
+				0F8424A61F9632D70043FA21 /* Recharge(充值) */,
+				0F8424A71F9632D70043FA21 /* TiedCard(绑卡) */,
+				0F8424A81F9632D70043FA21 /* Transfer(转账) */,
+				0F84248D1F96171B0043FA21 /* LaunchFinish(设备自检完成) */,
+				0F8424891F9614C20043FA21 /* Expand(扩展) */,
+				0FBBB2621F95F4610095B8BA /* Tool(工具类) */,
+				0FBBB2501F95E2090095B8BA /* Customs(自定义控件) */,
+				0FBBB24F1F95D2210095B8BA /* Launch(启动) */,
+				0FBBB24E1F95AF100095B8BA /* Base(基类) */,
+				0FBBB2461F95AAB50095B8BA /* AppDelegate(入口) */,
+				0FBBB2491F95AAB50095B8BA /* Resource(资源) */,
+				0FBBB2431F95AA4F0095B8BA /* Home(主页) */,
+				0FBBB2441F95AA4F0095B8BA /* Login(登录) */,
+				0FBBB2451F95AA4F0095B8BA /* Register(注册) */,
+				0F158A541F95A1B4009D1FCF /* Supporting Files */,
+			);
+			path = WhiteBoxDemo;
+			sourceTree = "<group>";
+		};
+		0F158A541F95A1B4009D1FCF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				0F158A5A1F95A1B4009D1FCF /* ViewController.h */,
+				0F158A5B1F95A1B4009D1FCF /* ViewController.m */,
+				0F158A5D1F95A1B4009D1FCF /* Main.storyboard */,
+				0F158A621F95A1B4009D1FCF /* LaunchScreen.storyboard */,
+				0F158A651F95A1B4009D1FCF /* Info.plist */,
+				0F158A551F95A1B4009D1FCF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0F158A6D1F95A1B4009D1FCF /* WhiteBoxDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				0F158A6E1F95A1B4009D1FCF /* WhiteBoxDemoTests.m */,
+				0F158A701F95A1B4009D1FCF /* Info.plist */,
+			);
+			path = WhiteBoxDemoTests;
+			sourceTree = "<group>";
+		};
+		0F158A781F95A1B4009D1FCF /* WhiteBoxDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0F158A791F95A1B4009D1FCF /* WhiteBoxDemoUITests.m */,
+				0F158A7B1F95A1B4009D1FCF /* Info.plist */,
+			);
+			path = WhiteBoxDemoUITests;
+			sourceTree = "<group>";
+		};
+		0F189DC31FA3151200888800 /* Libraries(第三方库) */ = {
+			isa = PBXGroup;
+			children = (
+				0F189DC41FA3151200888800 /* HYProgressHUD */,
+			);
+			path = "Libraries(第三方库)";
+			sourceTree = "<group>";
+		};
+		0F189DC41FA3151200888800 /* HYProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				0F189DC51FA3151200888800 /* circle-slash.png */,
+				0F189DC61FA3151200888800 /* circle-slash@2x.png */,
+				0F189DC71FA3151200888800 /* done-fail.png */,
+				0F189DC81FA3151200888800 /* done-fail@2x.png */,
+				0F189DC91FA3151200888800 /* done-good.png */,
+				0F189DCA1FA3151200888800 /* done-good@2x.png */,
+				0F189DCB1FA3151200888800 /* HYProgressHUD.h */,
+				0F189DCC1FA3151200888800 /* HYProgressHUD.m */,
+			);
+			path = HYProgressHUD;
+			sourceTree = "<group>";
+		};
+		0F3300B82015D25A0030D0E3 /* Business(模拟业务) */ = {
+			isa = PBXGroup;
+			children = (
+				0F3300B92015D2800030D0E3 /* NIST_BusinessViewController.h */,
+				0F3300BA2015D2800030D0E3 /* NIST_BusinessViewController.m */,
+				0F3300BC2015D2DA0030D0E3 /* NIST_BusinessTableViewCell.h */,
+				0F3300BD2015D2DA0030D0E3 /* NIST_BusinessTableViewCell.m */,
+			);
+			path = "Business(模拟业务)";
+			sourceTree = "<group>";
+		};
+		0F3DD2771FFF43C1006385D7 /* SecretKeyNegotiation(秘钥协商) */ = {
+			isa = PBXGroup;
+			children = (
+				0F3DD2781FFF43C1006385D7 /* ViewControllers */,
+			);
+			path = "SecretKeyNegotiation(秘钥协商)";
+			sourceTree = "<group>";
+		};
+		0F3DD2781FFF43C1006385D7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0F3DD2791FFF4401006385D7 /* NIST_SecretKeyNegotiationVC.h */,
+				0F3DD27A1FFF4401006385D7 /* NIST_SecretKeyNegotiationVC.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0F8424891F9614C20043FA21 /* Expand(扩展) */ = {
+			isa = PBXGroup;
+			children = (
+				0F84248A1F9615EB0043FA21 /* NSString+NIST.h */,
+				0F84248B1F9615EB0043FA21 /* NSString+NIST.m */,
+			);
+			path = "Expand(扩展)";
+			sourceTree = "<group>";
+		};
+		0F84248D1F96171B0043FA21 /* LaunchFinish(设备自检完成) */ = {
+			isa = PBXGroup;
+			children = (
+				0F84248E1F96173A0043FA21 /* NIST_LaunchFinishController.h */,
+				0F84248F1F96173A0043FA21 /* NIST_LaunchFinishController.m */,
+			);
+			path = "LaunchFinish(设备自检完成)";
+			sourceTree = "<group>";
+		};
+		0F84249D1F962F480043FA21 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0F8424A21F962F9D0043FA21 /* NIST_HomeCollectionCell.h */,
+				0F8424A31F962F9D0043FA21 /* NIST_HomeCollectionCell.m */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		0F84249E1F962F480043FA21 /* VIewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0F84249F1F962F480043FA21 /* NIST_HomeViewController.h */,
+				0F8424A01F962F480043FA21 /* NIST_HomeViewController.m */,
+			);
+			path = VIewControllers;
+			sourceTree = "<group>";
+		};
+		0F8424A51F9632D70043FA21 /* Pay(支付) */ = {
+			isa = PBXGroup;
+			children = (
+				0F0263DD1F973C5E00DE57B3 /* NIST_PayController.h */,
+				0F0263DE1F973C5E00DE57B3 /* NIST_PayController.m */,
+			);
+			path = "Pay(支付)";
+			sourceTree = "<group>";
+		};
+		0F8424A61F9632D70043FA21 /* Recharge(充值) */ = {
+			isa = PBXGroup;
+			children = (
+				0F0263E01F973C9700DE57B3 /* NIST_RechargeController.h */,
+				0F0263E11F973C9700DE57B3 /* NIST_RechargeController.m */,
+			);
+			path = "Recharge(充值)";
+			sourceTree = "<group>";
+		};
+		0F8424A71F9632D70043FA21 /* TiedCard(绑卡) */ = {
+			isa = PBXGroup;
+			children = (
+				0F0263E31F973CC100DE57B3 /* NIST_TiedCardController.h */,
+				0F0263E41F973CC100DE57B3 /* NIST_TiedCardController.m */,
+			);
+			path = "TiedCard(绑卡)";
+			sourceTree = "<group>";
+		};
+		0F8424A81F9632D70043FA21 /* Transfer(转账) */ = {
+			isa = PBXGroup;
+			children = (
+				0F0110171F988E3300D39708 /* Cells */,
+				0F0110181F988E3300D39708 /* ViewControllers */,
+			);
+			path = "Transfer(转账)";
+			sourceTree = "<group>";
+		};
+		0F8424A91F963BEE0043FA21 /* OPTVerify(OPT验证) */ = {
+			isa = PBXGroup;
+			children = (
+				0F8424AC1F963C140043FA21 /* NIST_OptVerifyController.h */,
+				0F8424AD1F963C140043FA21 /* NIST_OptVerifyController.m */,
+			);
+			path = "OPTVerify(OPT验证)";
+			sourceTree = "<group>";
+		};
+		0F8424AA1F963BEE0043FA21 /* Rebind(重新绑定) */ = {
+			isa = PBXGroup;
+			children = (
+				0F8424AF1F963C310043FA21 /* NIST_RebindController.h */,
+				0F8424B01F963C310043FA21 /* NIST_RebindController.m */,
+			);
+			path = "Rebind(重新绑定)";
+			sourceTree = "<group>";
+		};
+		0FA885C01FE2614A00FB7D71 /* SocketManager(socket通信工具) */ = {
+			isa = PBXGroup;
+			children = (
+				0FA886891FE2B41B00FB7D71 /* NIST_GCDAsyncSocketManager */,
+				0FA886A01FE2B41B00FB7D71 /* XMLNSDictionary */,
+				0FA886A31FE2B41B00FB7D71 /* XMLReader */,
+				0FA886A61FE2B41B00FB7D71 /* XMLWriter */,
+			);
+			path = "SocketManager(socket通信工具)";
+			sourceTree = "<group>";
+		};
+		0FA8864C1FE2731A00FB7D71 /* SDK(白盒SDK) */ = {
+			isa = PBXGroup;
+			children = (
+				0FA8864D1FE2731A00FB7D71 /* NIST_Tool(工具) */,
+				0FA886501FE2731A00FB7D71 /* WB_SDK(白盒SDK) */,
+			);
+			path = "SDK(白盒SDK)";
+			sourceTree = "<group>";
+		};
+		0FA8864D1FE2731A00FB7D71 /* NIST_Tool(工具) */ = {
+			isa = PBXGroup;
+			children = (
+				0FA8864E1FE2731A00FB7D71 /* NIST_Tool.h */,
+				0FA8864F1FE2731A00FB7D71 /* NIST_Tool.m */,
+			);
+			path = "NIST_Tool(工具)";
+			sourceTree = "<group>";
+		};
+		0FA886501FE2731A00FB7D71 /* WB_SDK(白盒SDK) */ = {
+			isa = PBXGroup;
+			children = (
+				0FA886511FE2731A00FB7D71 /* NIST_WB_SDK */,
+			);
+			path = "WB_SDK(白盒SDK)";
+			sourceTree = "<group>";
+		};
+		0FA886511FE2731A00FB7D71 /* NIST_WB_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				0FA886521FE2731A00FB7D71 /* sdk_C */,
+				0FA8865C1FE2731A00FB7D71 /* sdk_OC */,
+			);
+			path = NIST_WB_SDK;
+			sourceTree = "<group>";
+		};
+		0FA886521FE2731A00FB7D71 /* sdk_C */ = {
+			isa = PBXGroup;
+			children = (
+				0FA886561FE2731A00FB7D71 /* zalglib.h */,
+				0FA886541FE2731A00FB7D71 /* zclientsdk.c */,
+				0FA886551FE2731A00FB7D71 /* zclientwk.c */,
+				0FA886581FE2731A00FB7D71 /* zcom.c */,
+				0FA886531FE2731A00FB7D71 /* zcom.h */,
+				0FA886571FE2731A00FB7D71 /* ztype.h */,
+			);
+			path = sdk_C;
+			sourceTree = "<group>";
+		};
+		0FA8865C1FE2731A00FB7D71 /* sdk_OC */ = {
+			isa = PBXGroup;
+			children = (
+				0FA886781FE2736C00FB7D71 /* sm2alg.h */,
+				0FA8865D1FE2731A00FB7D71 /* NIST_WB_SDK_Header.h */,
+				0FA886691FE2731A00FB7D71 /* NIST_WB_SDK.h */,
+				0FA886611FE2731A00FB7D71 /* NIST_WB_SDK.m */,
+				0FA886651FE2731A00FB7D71 /* NIST_UUID.h */,
+				0FA8865E1FE2731A00FB7D71 /* NIST_UUID.m */,
+				0FA886671FE2731A00FB7D71 /* UICKeyChainStore.h */,
+				0FA8865F1FE2731A00FB7D71 /* UICKeyChainStore.m */,
+				0FA886661FE2731A00FB7D71 /* NIST_SSL.h */,
+				0FA886601FE2731A00FB7D71 /* NIST_SSL.m */,
+				0FA886681FE2731A00FB7D71 /* NIST_Read_Write.h */,
+				0FA886621FE2731A00FB7D71 /* NIST_Read_Write.m */,
+				0FA8866A1FE2731A00FB7D71 /* NIST_Device_Info.h */,
+				0FA886641FE2731A00FB7D71 /* NIST_Device_Info.m */,
+				0FA8866B1FE2731A00FB7D71 /* NIST_WB_SDK_Model.h */,
+				0FA886631FE2731A00FB7D71 /* NIST_WB_SDK_Model.m */,
+			);
+			path = sdk_OC;
+			sourceTree = "<group>";
+		};
+		0FA886891FE2B41B00FB7D71 /* NIST_GCDAsyncSocketManager */ = {
+			isa = PBXGroup;
+			children = (
+				0FA8868A1FE2B41B00FB7D71 /* Universal */,
+				0FA8868D1FE2B41B00FB7D71 /* Config */,
+				0FA8868F1FE2B41B00FB7D71 /* Manager */,
+				0FA886941FE2B41B00FB7D71 /* Keychain */,
+				0FA886971FE2B41B00FB7D71 /* Model */,
+			);
+			path = NIST_GCDAsyncSocketManager;
+			sourceTree = "<group>";
+		};
+		0FA8868A1FE2B41B00FB7D71 /* Universal */ = {
+			isa = PBXGroup;
+			children = (
+				0FA8868C1FE2B41B00FB7D71 /* NIST_GCDErrorManager.h */,
+				0FA8868B1FE2B41B00FB7D71 /* NIST_GCDErrorManager.m */,
+			);
+			path = Universal;
+			sourceTree = "<group>";
+		};
+		0FA8868D1FE2B41B00FB7D71 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				0FA8868E1FE2B41B00FB7D71 /* NIST_GCDSocketConfig.h */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		0FA8868F1FE2B41B00FB7D71 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0FA886931FE2B41B00FB7D71 /* NIST_GCDAsyncSocketManager.h */,
+				0FA886911FE2B41B00FB7D71 /* NIST_GCDAsyncSocketManager.m */,
+				0FA886901FE2B41B00FB7D71 /* NIST_GCDAsyncSocketCommunicationManager.h */,
+				0FA886921FE2B41B00FB7D71 /* NIST_GCDAsyncSocketCommunicationManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		0FA886941FE2B41B00FB7D71 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				0FA886951FE2B41B00FB7D71 /* NIST_GCDKeyChainManager.h */,
+				0FA886961FE2B41B00FB7D71 /* NIST_GCDKeyChainManager.m */,
+			);
+			path = Keychain;
+			sourceTree = "<group>";
+		};
+		0FA886971FE2B41B00FB7D71 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0FA8869A1FE2B41B00FB7D71 /* NIST_GCDConnectConfig.h */,
+				0FA8869F1FE2B41B00FB7D71 /* NIST_GCDConnectConfig.m */,
+				0FA8869C1FE2B41B00FB7D71 /* NIST_GCDAsyncSocketRequestModel.h */,
+				0FA886981FE2B41B00FB7D71 /* NIST_GCDAsyncSocketRequestModel.m */,
+				0FA886991FE2B41B00FB7D71 /* NIST_GCDAsyncSocketResponseModel.h */,
+				0FA8869D1FE2B41B00FB7D71 /* NIST_GCDAsyncSocketResponseModel.m */,
+				0FA8869B1FE2B41B00FB7D71 /* NIST_GCDAsyncSocketRequestElementModel.h */,
+				0FA8869E1FE2B41B00FB7D71 /* NIST_GCDAsyncSocketRequestElementModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0FA886A01FE2B41B00FB7D71 /* XMLNSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				0FA886A11FE2B41B00FB7D71 /* XMLDictionary.h */,
+				0FA886A21FE2B41B00FB7D71 /* XMLDictionary.m */,
+			);
+			path = XMLNSDictionary;
+			sourceTree = "<group>";
+		};
+		0FA886A31FE2B41B00FB7D71 /* XMLReader */ = {
+			isa = PBXGroup;
+			children = (
+				0FA886A41FE2B41B00FB7D71 /* XMLReader.h */,
+				0FA886A51FE2B41B00FB7D71 /* XMLReader.m */,
+			);
+			path = XMLReader;
+			sourceTree = "<group>";
+		};
+		0FA886A61FE2B41B00FB7D71 /* XMLWriter */ = {
+			isa = PBXGroup;
+			children = (
+				0FA886A81FE2B41B00FB7D71 /* XMLWriter.h */,
+				0FA886A71FE2B41B00FB7D71 /* XMLWriter.m */,
+			);
+			path = XMLWriter;
+			sourceTree = "<group>";
+		};
+		0FBBB2431F95AA4F0095B8BA /* Home(主页) */ = {
+			isa = PBXGroup;
+			children = (
+				0F84249D1F962F480043FA21 /* Cells */,
+				0F84249E1F962F480043FA21 /* VIewControllers */,
+			);
+			path = "Home(主页)";
+			sourceTree = "<group>";
+		};
+		0FBBB2441F95AA4F0095B8BA /* Login(登录) */ = {
+			isa = PBXGroup;
+			children = (
+				0F8424911F9620350043FA21 /* NIST_LoginController.h */,
+				0F8424921F9620350043FA21 /* NIST_LoginController.m */,
+			);
+			path = "Login(登录)";
+			sourceTree = "<group>";
+		};
+		0FBBB2451F95AA4F0095B8BA /* Register(注册) */ = {
+			isa = PBXGroup;
+			children = (
+				0F8424941F9620490043FA21 /* NIST_RegistController.h */,
+				0F8424951F9620490043FA21 /* NIST_RegistController.m */,
+			);
+			path = "Register(注册)";
+			sourceTree = "<group>";
+		};
+		0FBBB2461F95AAB50095B8BA /* AppDelegate(入口) */ = {
+			isa = PBXGroup;
+			children = (
+				0FBBB2471F95AAB50095B8BA /* AppDelegate.h */,
+				0FBBB2481F95AAB50095B8BA /* AppDelegate.m */,
+				0FBBB24D1F95AAD40095B8BA /* PrefixHeader.pch */,
+			);
+			path = "AppDelegate(入口)";
+			sourceTree = "<group>";
+		};
+		0FBBB2491F95AAB50095B8BA /* Resource(资源) */ = {
+			isa = PBXGroup;
+			children = (
+				0FBBB24A1F95AAB50095B8BA /* Assets.xcassets */,
+			);
+			path = "Resource(资源)";
+			sourceTree = "<group>";
+		};
+		0FBBB24E1F95AF100095B8BA /* Base(基类) */ = {
+			isa = PBXGroup;
+			children = (
+				0F8424971F962BCE0043FA21 /* NIST_BaseViewController.h */,
+				0F8424981F962BCE0043FA21 /* NIST_BaseViewController.m */,
+			);
+			path = "Base(基类)";
+			sourceTree = "<group>";
+		};
+		0FBBB24F1F95D2210095B8BA /* Launch(启动) */ = {
+			isa = PBXGroup;
+			children = (
+				0FBBB2571F95EAB20095B8BA /* ViewControllers */,
+				0FBBB2581F95EAB20095B8BA /* views */,
+			);
+			path = "Launch(启动)";
+			sourceTree = "<group>";
+		};
+		0FBBB2501F95E2090095B8BA /* Customs(自定义控件) */ = {
+			isa = PBXGroup;
+			children = (
+				0FBBB2511F95E2C20095B8BA /* NIST_HeadView.h */,
+				0FBBB2521F95E2C20095B8BA /* NIST_HeadView.m */,
+				0FBBB2541F95E7CE0095B8BA /* NIST_CheckView.h */,
+				0FBBB2551F95E7CE0095B8BA /* NIST_CheckView.m */,
+				0F8424801F95FEC80043FA21 /* NIST_PasswordView.h */,
+				0F8424811F95FEC80043FA21 /* NIST_PasswordView.m */,
+				0F0263D31F96FF2300DE57B3 /* NIST_VerificationCodeView.h */,
+				0F0263D41F96FF2300DE57B3 /* NIST_VerificationCodeView.m */,
+				0F0E98861F999F63005884B2 /* NIST_InputView.h */,
+				0F0E98871F999F63005884B2 /* NIST_InputView.m */,
+			);
+			path = "Customs(自定义控件)";
+			sourceTree = "<group>";
+		};
+		0FBBB2571F95EAB20095B8BA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0F0263DA1F973A4500DE57B3 /* NIST_LaunchController.h */,
+				0F0263DB1F973A4500DE57B3 /* NIST_LaunchController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		0FBBB2581F95EAB20095B8BA /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		0FBBB2621F95F4610095B8BA /* Tool(工具类) */ = {
+			isa = PBXGroup;
+			children = (
+				0F189DD41FA3158200888800 /* Tool.h */,
+				0F189DD51FA3158200888800 /* Tool.m */,
+			);
+			path = "Tool(工具类)";
+			sourceTree = "<group>";
+		};
+		58A33B1C9893783DBF2B3DC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0FA886831FE29CEE00FB7D71 /* CoreTelephony.framework */,
+				0FA8867E1FE286FE00FB7D71 /* libiconv.tbd */,
+				0FA8864A1FE26A1C00FB7D71 /* libNIST_WB_SMX.a */,
+				233CEBC76576B2B1C6055AD4 /* libPods-WhiteBoxDemo.a */,
+				87A79FF8633F693C938C92C7 /* libPods-WhiteBoxDemoTests.a */,
+				73931CF66FBE41A2832DF940 /* libPods-WhiteBoxDemoUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0F158A501F95A1B4009D1FCF /* WhiteBoxDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F158A7E1F95A1B4009D1FCF /* Build configuration list for PBXNativeTarget "WhiteBoxDemo" */;
+			buildPhases = (
+				11913A94BF488137602485E2 /* [CP] Check Pods Manifest.lock */,
+				0F158A4D1F95A1B4009D1FCF /* Sources */,
+				0F158A4E1F95A1B4009D1FCF /* Frameworks */,
+				0F158A4F1F95A1B4009D1FCF /* Resources */,
+				590B1A20F6EEB9175C77F943 /* [CP] Embed Pods Frameworks */,
+				19498E53A56AF07C0F122C95 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WhiteBoxDemo;
+			productName = WhiteBoxDemo;
+			productReference = 0F158A511F95A1B4009D1FCF /* WhiteBoxDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0F158A691F95A1B4009D1FCF /* WhiteBoxDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F158A811F95A1B4009D1FCF /* Build configuration list for PBXNativeTarget "WhiteBoxDemoTests" */;
+			buildPhases = (
+				F577D5941183EAB1D70E69CB /* [CP] Check Pods Manifest.lock */,
+				0F158A661F95A1B4009D1FCF /* Sources */,
+				0F158A671F95A1B4009D1FCF /* Frameworks */,
+				0F158A681F95A1B4009D1FCF /* Resources */,
+				0A926AE7403450502CDAC690 /* [CP] Embed Pods Frameworks */,
+				A4D8BC515EE847FFE339098D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F158A6C1F95A1B4009D1FCF /* PBXTargetDependency */,
+			);
+			name = WhiteBoxDemoTests;
+			productName = WhiteBoxDemoTests;
+			productReference = 0F158A6A1F95A1B4009D1FCF /* WhiteBoxDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0F158A741F95A1B4009D1FCF /* WhiteBoxDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F158A841F95A1B4009D1FCF /* Build configuration list for PBXNativeTarget "WhiteBoxDemoUITests" */;
+			buildPhases = (
+				F85EE1E72378053F9FB9CD58 /* [CP] Check Pods Manifest.lock */,
+				0F158A711F95A1B4009D1FCF /* Sources */,
+				0F158A721F95A1B4009D1FCF /* Frameworks */,
+				0F158A731F95A1B4009D1FCF /* Resources */,
+				3101C73596AB871B3EFC0910 /* [CP] Embed Pods Frameworks */,
+				4F3EA00BCFF1ADBDE7D4D750 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F158A771F95A1B4009D1FCF /* PBXTargetDependency */,
+			);
+			name = WhiteBoxDemoUITests;
+			productName = WhiteBoxDemoUITests;
+			productReference = 0F158A751F95A1B4009D1FCF /* WhiteBoxDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0F158A491F95A1B4009D1FCF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "范云飞";
+				TargetAttributes = {
+					0F158A501F95A1B4009D1FCF = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = TCT9M53HAH;
+						ProvisioningStyle = Automatic;
+					};
+					0F158A691F95A1B4009D1FCF = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = TCT9M53HAH;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0F158A501F95A1B4009D1FCF;
+					};
+					0F158A741F95A1B4009D1FCF = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = TCT9M53HAH;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 0F158A501F95A1B4009D1FCF;
+					};
+				};
+			};
+			buildConfigurationList = 0F158A4C1F95A1B4009D1FCF /* Build configuration list for PBXProject "WhiteBoxDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 0F158A481F95A1B4009D1FCF;
+			productRefGroup = 0F158A521F95A1B4009D1FCF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0F158A501F95A1B4009D1FCF /* WhiteBoxDemo */,
+				0F158A691F95A1B4009D1FCF /* WhiteBoxDemoTests */,
+				0F158A741F95A1B4009D1FCF /* WhiteBoxDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0F158A4F1F95A1B4009D1FCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F189DD01FA3151200888800 /* done-fail@2x.png in Resources */,
+				0F158A641F95A1B4009D1FCF /* LaunchScreen.storyboard in Resources */,
+				0F189DCD1FA3151200888800 /* circle-slash.png in Resources */,
+				0FBBB24C1F95AAB50095B8BA /* Assets.xcassets in Resources */,
+				0F189DD11FA3151200888800 /* done-good.png in Resources */,
+				0F189DCF1FA3151200888800 /* done-fail.png in Resources */,
+				0F158A5F1F95A1B4009D1FCF /* Main.storyboard in Resources */,
+				0F189DCE1FA3151200888800 /* circle-slash@2x.png in Resources */,
+				0F189DD21FA3151200888800 /* done-good@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F158A681F95A1B4009D1FCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F158A731F95A1B4009D1FCF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A926AE7403450502CDAC690 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhiteBoxDemoTests/Pods-WhiteBoxDemoTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		11913A94BF488137602485E2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhiteBoxDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		19498E53A56AF07C0F122C95 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WhiteBoxDemo/Pods-WhiteBoxDemo-resources.sh",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhiteBoxDemo/Pods-WhiteBoxDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3101C73596AB871B3EFC0910 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhiteBoxDemoUITests/Pods-WhiteBoxDemoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F3EA00BCFF1ADBDE7D4D750 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhiteBoxDemoUITests/Pods-WhiteBoxDemoUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		590B1A20F6EEB9175C77F943 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhiteBoxDemo/Pods-WhiteBoxDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A4D8BC515EE847FFE339098D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WhiteBoxDemoTests/Pods-WhiteBoxDemoTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F577D5941183EAB1D70E69CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhiteBoxDemoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F85EE1E72378053F9FB9CD58 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WhiteBoxDemoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0F158A4D1F95A1B4009D1FCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FA886811FE2912D00FB7D71 /* NIST_TransferController.m in Sources */,
+				0FA886801FE290E700FB7D71 /* NIST_SSL.m in Sources */,
+				0FA886B11FE2B41C00FB7D71 /* XMLDictionary.m in Sources */,
+				0F8424961F9620490043FA21 /* NIST_RegistController.m in Sources */,
+				0FA886AB1FE2B41C00FB7D71 /* NIST_GCDAsyncSocketCommunicationManager.m in Sources */,
+				0F0E98881F999F63005884B2 /* NIST_InputView.m in Sources */,
+				0FA886AF1FE2B41C00FB7D71 /* NIST_GCDAsyncSocketRequestElementModel.m in Sources */,
+				0FA886A91FE2B41C00FB7D71 /* NIST_GCDErrorManager.m in Sources */,
+				0F0263D51F96FF2300DE57B3 /* NIST_VerificationCodeView.m in Sources */,
+				0FA886741FE2731A00FB7D71 /* NIST_WB_SDK.m in Sources */,
+				0FA886B21FE2B41C00FB7D71 /* XMLReader.m in Sources */,
+				0FA886AC1FE2B41C00FB7D71 /* NIST_GCDKeyChainManager.m in Sources */,
+				0F8424821F95FEC80043FA21 /* NIST_PasswordView.m in Sources */,
+				0F8424B11F963C310043FA21 /* NIST_RebindController.m in Sources */,
+				0F8424A41F962F9D0043FA21 /* NIST_HomeCollectionCell.m in Sources */,
+				0F8424A11F962F480043FA21 /* NIST_HomeViewController.m in Sources */,
+				0FA8866F1FE2731A00FB7D71 /* zcom.c in Sources */,
+				0FBBB2561F95E7CE0095B8BA /* NIST_CheckView.m in Sources */,
+				0FBBB2531F95E2C20095B8BA /* NIST_HeadView.m in Sources */,
+				0F189DD31FA3151200888800 /* HYProgressHUD.m in Sources */,
+				0F0263D91F973A2700DE57B3 /* NIST_SetPINController.m in Sources */,
+				0F84248C1F9615EB0043FA21 /* NSString+NIST.m in Sources */,
+				0FA886721FE2731A00FB7D71 /* UICKeyChainStore.m in Sources */,
+				0FA8866C1FE2731A00FB7D71 /* NIST_Tool.m in Sources */,
+				0F0110241F98B18A00D39708 /* NIST_PaymentTableViewCell.m in Sources */,
+				0F3300BB2015D2800030D0E3 /* NIST_BusinessViewController.m in Sources */,
+				0FA886AA1FE2B41C00FB7D71 /* NIST_GCDAsyncSocketManager.m in Sources */,
+				0F158A5C1F95A1B4009D1FCF /* ViewController.m in Sources */,
+				0F0110271F98B1A500D39708 /* NIST_PayeeTableViewCell.m in Sources */,
+				0FA8866E1FE2731A00FB7D71 /* zclientwk.c in Sources */,
+				0FA886AD1FE2B41C00FB7D71 /* NIST_GCDAsyncSocketRequestModel.m in Sources */,
+				0F0263DF1F973C5E00DE57B3 /* NIST_PayController.m in Sources */,
+				0F189DD61FA3158200888800 /* Tool.m in Sources */,
+				0F8424991F962BCE0043FA21 /* NIST_BaseViewController.m in Sources */,
+				0F0263DC1F973A4500DE57B3 /* NIST_LaunchController.m in Sources */,
+				0F3300BE2015D2DA0030D0E3 /* NIST_BusinessTableViewCell.m in Sources */,
+				0FA886AE1FE2B41C00FB7D71 /* NIST_GCDAsyncSocketResponseModel.m in Sources */,
+				0FA886B31FE2B41C00FB7D71 /* XMLWriter.m in Sources */,
+				0F0263E51F973CC100DE57B3 /* NIST_TiedCardController.m in Sources */,
+				0FA886751FE2731A00FB7D71 /* NIST_Read_Write.m in Sources */,
+				0F0263E21F973C9700DE57B3 /* NIST_RechargeController.m in Sources */,
+				0FA886771FE2731A00FB7D71 /* NIST_Device_Info.m in Sources */,
+				0F8424901F96173A0043FA21 /* NIST_LaunchFinishController.m in Sources */,
+				0FA886711FE2731A00FB7D71 /* NIST_UUID.m in Sources */,
+				0F3DD27B1FFF4401006385D7 /* NIST_SecretKeyNegotiationVC.m in Sources */,
+				0FA886B01FE2B41C00FB7D71 /* NIST_GCDConnectConfig.m in Sources */,
+				0F8424931F9620350043FA21 /* NIST_LoginController.m in Sources */,
+				0F158A561F95A1B4009D1FCF /* main.m in Sources */,
+				0FA886761FE2731A00FB7D71 /* NIST_WB_SDK_Model.m in Sources */,
+				0FA8866D1FE2731A00FB7D71 /* zclientsdk.c in Sources */,
+				0F8424AE1F963C140043FA21 /* NIST_OptVerifyController.m in Sources */,
+				0FBBB24B1F95AAB50095B8BA /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F158A661F95A1B4009D1FCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F158A6F1F95A1B4009D1FCF /* WhiteBoxDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F158A711F95A1B4009D1FCF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F158A7A1F95A1B4009D1FCF /* WhiteBoxDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F158A6C1F95A1B4009D1FCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F158A501F95A1B4009D1FCF /* WhiteBoxDemo */;
+			targetProxy = 0F158A6B1F95A1B4009D1FCF /* PBXContainerItemProxy */;
+		};
+		0F158A771F95A1B4009D1FCF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F158A501F95A1B4009D1FCF /* WhiteBoxDemo */;
+			targetProxy = 0F158A761F95A1B4009D1FCF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		0F158A5D1F95A1B4009D1FCF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F158A5E1F95A1B4009D1FCF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0F158A621F95A1B4009D1FCF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F158A631F95A1B4009D1FCF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0F158A7C1F95A1B4009D1FCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0F158A7D1F95A1B4009D1FCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0F158A7F1F95A1B4009D1FCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 081987E5F37D2ED9F86A0A81 /* Pods-WhiteBoxDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TCT9M53HAH;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WhiteBoxDemo/AppDelegate(入口)/PrefixHeader.pch";
+				INFOPLIST_FILE = WhiteBoxDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WhiteBoxDemo/SDK(白盒SDK)/WB_SDK(白盒SDK)/NIST_WB_SDK/miracl-lib-arm64-X86_64",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "---.WhiteBoxDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0F158A801F95A1B4009D1FCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EA94CB8EA3F51874FEA6BDB /* Pods-WhiteBoxDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TCT9M53HAH;
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/WhiteBoxDemo/AppDelegate(入口)/PrefixHeader.pch";
+				INFOPLIST_FILE = WhiteBoxDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WhiteBoxDemo/SDK(白盒SDK)/WB_SDK(白盒SDK)/NIST_WB_SDK/miracl-lib-arm64-X86_64",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "---.WhiteBoxDemo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0F158A821F95A1B4009D1FCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8F1BA4F9C2CE9F97BFD0ECA9 /* Pods-WhiteBoxDemoTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = TCT9M53HAH;
+				INFOPLIST_FILE = WhiteBoxDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "---.WhiteBoxDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhiteBoxDemo.app/WhiteBoxDemo";
+			};
+			name = Debug;
+		};
+		0F158A831F95A1B4009D1FCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 540B77F759E69FFEFE88B561 /* Pods-WhiteBoxDemoTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = TCT9M53HAH;
+				INFOPLIST_FILE = WhiteBoxDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "---.WhiteBoxDemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WhiteBoxDemo.app/WhiteBoxDemo";
+			};
+			name = Release;
+		};
+		0F158A851F95A1B4009D1FCF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6DC20001B19AA5566FB8C782 /* Pods-WhiteBoxDemoUITests.debug.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = TCT9M53HAH;
+				INFOPLIST_FILE = WhiteBoxDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "---.WhiteBoxDemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WhiteBoxDemo;
+			};
+			name = Debug;
+		};
+		0F158A861F95A1B4009D1FCF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 528FF1F9B2C948C9BA3B452D /* Pods-WhiteBoxDemoUITests.release.xcconfig */;
+			buildSettings = {
+				DEVELOPMENT_TEAM = TCT9M53HAH;
+				INFOPLIST_FILE = WhiteBoxDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "---.WhiteBoxDemoUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WhiteBoxDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0F158A4C1F95A1B4009D1FCF /* Build configuration list for PBXProject "WhiteBoxDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F158A7C1F95A1B4009D1FCF /* Debug */,
+				0F158A7D1F95A1B4009D1FCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F158A7E1F95A1B4009D1FCF /* Build configuration list for PBXNativeTarget "WhiteBoxDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F158A7F1F95A1B4009D1FCF /* Debug */,
+				0F158A801F95A1B4009D1FCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F158A811F95A1B4009D1FCF /* Build configuration list for PBXNativeTarget "WhiteBoxDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F158A821F95A1B4009D1FCF /* Debug */,
+				0F158A831F95A1B4009D1FCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0F158A841F95A1B4009D1FCF /* Build configuration list for PBXNativeTarget "WhiteBoxDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F158A851F95A1B4009D1FCF /* Debug */,
+				0F158A861F95A1B4009D1FCF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0F158A491F95A1B4009D1FCF /* Project object */;
+}

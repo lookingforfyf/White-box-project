@@ -1,0 +1,97 @@
+//
+//  PrefixHeader.pch
+//  WhiteBoxDemo
+//
+//  Created by 范云飞 on 2017/10/17.
+//  Copyright © 2017年 范云飞. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#pragma mark - 第三方文件
+#import "Masonry.h"
+#import  <CocoaAsyncSocket/GCDAsyncSocket.h>
+#import  <CocoaAsyncSocket/GCDAsyncUdpSocket.h>
+#import  <IQKeyboardManager/IQKeyboardManager.h>
+#import "HYProgressHUD.h"
+
+#pragma mark - ViewControllers
+#import "NIST_BaseViewController.h"                    /* 基类 */
+#import "NIST_LaunchController.h"                      /* 启动时设备自检 */
+#import "NIST_SetPINController.h"                      /* 设置PIN码 */
+#import "NIST_LaunchFinishController.h"                /* 设备自检完成时应该跳转的页面 */
+#import "NIST_LoginController.h"                       /* 登录 */
+#import "NIST_RegistController.h"                      /* 注册 */
+#import "NIST_RebindController.h"                      /* 重新绑定 */
+#import "NIST_OptVerifyController.h"                   /* OPT验证 */
+#import "NIST_HomeViewController.h"                    /* 功能菜单页 */
+#import "NIST_PayController.h"                         /* 支付 */
+#import "NIST_TiedCardController.h"                    /* 绑卡 */
+#import "NIST_RechargeController.h"                    /* 充值 */
+#import "NIST_TransferController.h"                    /* 转账 */
+#import "NIST_SecretKeyNegotiationVC.h"                /* 秘钥协商 */
+#import "NIST_BusinessViewController.h"                /* 业务 */
+
+#pragma mark - Views
+#import "NIST_HeadView.h"                              /* 公用的头视图 */
+#import "NIST_CheckView.h"                             /* 设备自检时的View */
+#import "NIST_PasswordView.h"                          /* 密码输入框 */
+#import "NIST_VerificationCodeView.h"                  /* 图片验证码 */
+#import "NIST_InputView.h"                             /* 自定义textField 的inputView */
+
+#pragma mark - Cells
+#import "NIST_HomeCollectionCell.h"
+#import "NIST_PayeeTableViewCell.h"
+#import "NIST_PaymentTableViewCell.h"
+#import "NIST_BusinessTableViewCell.h"
+
+#pragma mark - Tools
+#import "Tool.h"
+
+#pragma mark - 扩展
+#import "NSString+NIST.h"
+
+#pragma mark - socket通信工具
+#import "NIST_GCDSocketConfig.h"                        /* socket宏定义 */
+#import "NIST_GCDConnectConfig.h"                       /* socket通信配置 */
+#import "NIST_GCDAsyncSocketCommunicationManager.h"     /* 业务处理 */
+#import "NIST_GCDAsyncSocketResponseModel.h"            /* 响应报文模型 */
+
+#pragma mark - 白盒SDK
+#import "NIST_WB_SDK_Header.h"
+
+#pragma mark - 屏幕尺寸
+#define SCREEN_WIDTH         ([UIScreen mainScreen].bounds.size.width)
+#define SCREEN_HEIGHT        ([UIScreen mainScreen].bounds.size.height)
+#define SCALE                [UIScreen mainScreen].scale
+
+#pragma mark - 设备类型
+#ifndef is_iPhone5
+#define is_iPhone5           (([[UIScreen mainScreen]bounds].size.height - 568) == 0 ? YES : NO)
+#endif
+#ifndef is_iPhone6
+#define is_iPhone6           (([[UIScreen mainScreen]bounds].size.height - 667) == 0 ? YES : NO)
+#endif
+#ifndef is_iPhone6p
+#define is_iPhone6p          (([[UIScreen mainScreen]bounds].size.height - 667) > 0 ? YES : NO)
+#endif
+#ifndef is_iPad
+#define is_iPad              ([[UIDevice currentDevice].model rangeOfString:@"iPad"].length > 0 ? YES : NO)
+#endif
+
+#pragma mark - 像素
+#define RGB(r, g, b)         [UIColor colorWithRed: (r) / 255.0 green: (g) / 255.0 blue: (b) / 255.0 alpha: 1.0]
+#define RandomColor          [UIColor colorWithRed:arc4random() % 100 / 100.0 green:arc4random() % 100 / 100.0 blue:arc4random() % 100 / 100.0 alpha: 0.5]
+
+#pragma mark - 沙盒目录
+#define kUserDefaults        [NSUserDefaults standardUserDefaults]
+
+#pragma mark - 获取通知中心
+#define kNotificationCenter  [NSNotificationCenter defaultCenter]
+
+#pragma mark - 强/弱引用
+#define WeakSelf(type)       __weak typeof(type) weak##type = type;
+#define StrongSelf(type)     __strong typeof(type) type = weak##type;
+
+#endif /* PrefixHeader_pch */
