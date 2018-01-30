@@ -29,10 +29,8 @@
 #import "NIST_WB_SDK.h"             /* SDK的业务处理 */
 #import "NIST_Device_Info.h"        /* 获取设备信息 */
 #import "NIST_UUID.h"               /* 获取设备唯一标示 */
-#import "UICKeyChainStore.h"        /* 保存数据到KeyChain */
 #import "NIST_SSL.h"                /* 算法 */
 #import "NIST_Read_Write.h"         /* 缓存数据 */
 #import "NIST_Tool.h"               /* 字符转换工具 */
-#import "NIST_WB_SDK_Model.h"       /* 记录SDK操作状态的模型 */
 
 #endif /* NIST_WB_SDK_Header_h */

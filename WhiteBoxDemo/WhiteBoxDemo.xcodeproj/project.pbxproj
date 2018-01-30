@@ -49,10 +49,8 @@
 		0FA8866E1FE2731A00FB7D71 /* zclientwk.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886551FE2731A00FB7D71 /* zclientwk.c */; };
 		0FA8866F1FE2731A00FB7D71 /* zcom.c in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886581FE2731A00FB7D71 /* zcom.c */; };
 		0FA886711FE2731A00FB7D71 /* NIST_UUID.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA8865E1FE2731A00FB7D71 /* NIST_UUID.m */; };
-		0FA886721FE2731A00FB7D71 /* UICKeyChainStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA8865F1FE2731A00FB7D71 /* UICKeyChainStore.m */; };
 		0FA886741FE2731A00FB7D71 /* NIST_WB_SDK.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886611FE2731A00FB7D71 /* NIST_WB_SDK.m */; };
 		0FA886751FE2731A00FB7D71 /* NIST_Read_Write.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886621FE2731A00FB7D71 /* NIST_Read_Write.m */; };
-		0FA886761FE2731A00FB7D71 /* NIST_WB_SDK_Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886631FE2731A00FB7D71 /* NIST_WB_SDK_Model.m */; };
 		0FA886771FE2731A00FB7D71 /* NIST_Device_Info.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886641FE2731A00FB7D71 /* NIST_Device_Info.m */; };
 		0FA886801FE290E700FB7D71 /* NIST_SSL.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FA886601FE2731A00FB7D71 /* NIST_SSL.m */; };
 		0FA886811FE2912D00FB7D71 /* NIST_TransferController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F01101A1F988E3300D39708 /* NIST_TransferController.m */; };
@@ -176,19 +174,15 @@
 		0FA886581FE2731A00FB7D71 /* zcom.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zcom.c; sourceTree = "<group>"; };
 		0FA8865D1FE2731A00FB7D71 /* NIST_WB_SDK_Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_WB_SDK_Header.h; sourceTree = "<group>"; };
 		0FA8865E1FE2731A00FB7D71 /* NIST_UUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_UUID.m; sourceTree = "<group>"; };
-		0FA8865F1FE2731A00FB7D71 /* UICKeyChainStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UICKeyChainStore.m; sourceTree = "<group>"; };
 		0FA886601FE2731A00FB7D71 /* NIST_SSL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_SSL.m; sourceTree = "<group>"; };
 		0FA886611FE2731A00FB7D71 /* NIST_WB_SDK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_WB_SDK.m; sourceTree = "<group>"; };
 		0FA886621FE2731A00FB7D71 /* NIST_Read_Write.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_Read_Write.m; sourceTree = "<group>"; };
-		0FA886631FE2731A00FB7D71 /* NIST_WB_SDK_Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_WB_SDK_Model.m; sourceTree = "<group>"; };
 		0FA886641FE2731A00FB7D71 /* NIST_Device_Info.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NIST_Device_Info.m; sourceTree = "<group>"; };
 		0FA886651FE2731A00FB7D71 /* NIST_UUID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_UUID.h; sourceTree = "<group>"; };
 		0FA886661FE2731A00FB7D71 /* NIST_SSL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_SSL.h; sourceTree = "<group>"; };
-		0FA886671FE2731A00FB7D71 /* UICKeyChainStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UICKeyChainStore.h; sourceTree = "<group>"; };
 		0FA886681FE2731A00FB7D71 /* NIST_Read_Write.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_Read_Write.h; sourceTree = "<group>"; };
 		0FA886691FE2731A00FB7D71 /* NIST_WB_SDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_WB_SDK.h; sourceTree = "<group>"; };
 		0FA8866A1FE2731A00FB7D71 /* NIST_Device_Info.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_Device_Info.h; sourceTree = "<group>"; };
-		0FA8866B1FE2731A00FB7D71 /* NIST_WB_SDK_Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NIST_WB_SDK_Model.h; sourceTree = "<group>"; };
 		0FA886781FE2736C00FB7D71 /* sm2alg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = sm2alg.h; path = "WhiteBoxDemo/SDK(白盒SDK)/WB_SDK(白盒SDK)/NIST_WB_SDK/miracl-lib-arm64-X86_64/sm2alg.h"; sourceTree = SOURCE_ROOT; };
 		0FA8867E1FE286FE00FB7D71 /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		0FA886831FE29CEE00FB7D71 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -598,16 +592,12 @@
 				0FA886611FE2731A00FB7D71 /* NIST_WB_SDK.m */,
 				0FA886651FE2731A00FB7D71 /* NIST_UUID.h */,
 				0FA8865E1FE2731A00FB7D71 /* NIST_UUID.m */,
-				0FA886671FE2731A00FB7D71 /* UICKeyChainStore.h */,
-				0FA8865F1FE2731A00FB7D71 /* UICKeyChainStore.m */,
 				0FA886661FE2731A00FB7D71 /* NIST_SSL.h */,
 				0FA886601FE2731A00FB7D71 /* NIST_SSL.m */,
 				0FA886681FE2731A00FB7D71 /* NIST_Read_Write.h */,
 				0FA886621FE2731A00FB7D71 /* NIST_Read_Write.m */,
 				0FA8866A1FE2731A00FB7D71 /* NIST_Device_Info.h */,
 				0FA886641FE2731A00FB7D71 /* NIST_Device_Info.m */,
-				0FA8866B1FE2731A00FB7D71 /* NIST_WB_SDK_Model.h */,
-				0FA886631FE2731A00FB7D71 /* NIST_WB_SDK_Model.m */,
 			);
 			path = sdk_OC;
 			sourceTree = "<group>";
@@ -1144,7 +1134,6 @@
 				0F189DD31FA3151200888800 /* HYProgressHUD.m in Sources */,
 				0F0263D91F973A2700DE57B3 /* NIST_SetPINController.m in Sources */,
 				0F84248C1F9615EB0043FA21 /* NSString+NIST.m in Sources */,
-				0FA886721FE2731A00FB7D71 /* UICKeyChainStore.m in Sources */,
 				0FA8866C1FE2731A00FB7D71 /* NIST_Tool.m in Sources */,
 				0F0110241F98B18A00D39708 /* NIST_PaymentTableViewCell.m in Sources */,
 				0F3300BB2015D2800030D0E3 /* NIST_BusinessViewController.m in Sources */,
@@ -1170,7 +1159,6 @@
 				0FA886B01FE2B41C00FB7D71 /* NIST_GCDConnectConfig.m in Sources */,
 				0F8424931F9620350043FA21 /* NIST_LoginController.m in Sources */,
 				0F158A561F95A1B4009D1FCF /* main.m in Sources */,
-				0FA886761FE2731A00FB7D71 /* NIST_WB_SDK_Model.m in Sources */,
 				0FA8866D1FE2731A00FB7D71 /* zclientsdk.c in Sources */,
 				0F8424AE1F963C140043FA21 /* NIST_OptVerifyController.m in Sources */,
 				0FBBB24B1F95AAB50095B8BA /* AppDelegate.m in Sources */,

@@ -20,7 +20,7 @@
 @property (nonatomic, strong) UIColor * lineColor;
 @property (nonatomic, strong) UIColor * textColor;
 @property (nonatomic, strong) UIFont * textFont;
-@property (nonatomic, strong) NSObject * observer;             /* 观察者 */
+@property (nonatomic, strong) id observer;             /* 观察者 */
 @property (nonatomic, strong) UITextField * textField;
 @end
 
@@ -92,7 +92,7 @@
     {
         [[NSNotificationCenter defaultCenter] removeObserver:self.observer];
     }
-    
+  
     self.observer = [[NSNotificationCenter defaultCenter] addObserverForName:UITextFieldTextDidChangeNotification object:nil queue:nil usingBlock:^(NSNotification * _Nonnull note) {
         NSInteger length = self.textField.text.length;
         

@@ -199,50 +199,6 @@
 
 #pragma mark -
 /**
- unsigned char -> unsigned long long
-
- @param input unsigned char
- @param output unsigned long long
- @param len sizeof(unsigned char [])
- */
-void NIST_u64FromToU8(unsigned char * input,
-                      unsigned long long * output,
-                      int len);
-
-/**
- unsigned long long -> unsigned char
-
- @param input unsigned long long
- @param output unsigned char
- @param len sizeof(unsigned long long [])
- */
-void NIST_u8FromToU64(unsigned long long * input,
-                      unsigned char * output,
-                      int len);
-
-/**
- unsigned char -> unsigned long long
- 
- @param input unsigned char
- @param output unsigned long long
- @param ilen sizeof(unsigned char [])
- */
-void u64FromToU8(const unsigned char * input,
-                 int ilen,
-                 unsigned long long * output);
-
-/**
- unsigned long long -> unsigned char
- 
- @param input unsigned long long
- @param output unsigned char
- @param ilen sizeof(unsigned long long [])
- */
-void u8FromToU64(const unsigned long long * input,
-                 int ilen,
-                 unsigned char * output);
-
-/**
  大小端转换
 
  @param data <#data description#>

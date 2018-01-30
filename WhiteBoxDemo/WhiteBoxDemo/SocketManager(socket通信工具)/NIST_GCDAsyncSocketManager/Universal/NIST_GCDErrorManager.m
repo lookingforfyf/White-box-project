@@ -14,19 +14,19 @@
     NSString * errorMessage;
     switch (errorCode)
     {
-        case 1:
+        case 1001:
             errorMessage = NIST_REQUEST_ERROR;
             errorCode = 1001;
             break;
-        case 2:
+        case 1002:
             errorMessage = NIST_REQUEST_PARAM_ERROR;
             errorCode = 1002;
             break;
-        case 3:
-            errorMessage = NIST_REQUEST_TIMEOUT;
+        case 1003:
+            errorMessage = NIST_SOCKET_IS_NOT_CONNECTED;
             errorCode = 1003;
             break;
-        case 4:
+        case 1004:
             errorMessage = NIST_SERVER_MAINTENANCE_UPDATES;
             errorCode = 1004;
             break;
@@ -41,9 +41,6 @@
             break;
         case 2004:
             errorMessage = NIST_XML_PARSE_ERROR;
-            break;
-        case 2003:
-            errorMessage = NIST_LOCAL_PARAM_ERROR;
             break;
         default:
             break;

@@ -20,6 +20,6 @@
 #define PRODUCTION_PORT           @""
 
 /* 默认通道 */
-#define DefaultChannel            @"dkf"
+#define DefaultChannel            @"default"
 
 #endif /* NIST_GCDSocketConfig_h */

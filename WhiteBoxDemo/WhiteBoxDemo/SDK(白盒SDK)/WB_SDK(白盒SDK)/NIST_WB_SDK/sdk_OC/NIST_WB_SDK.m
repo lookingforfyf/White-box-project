@@ -69,7 +69,22 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
 
 - (void)setup
 {
-    splitChar = SPLIT_CHAR;
+    splitChar        = SPLIT_CHAR;
+    
+//    /**
+//     为了测试先把SDK内部私有变量写死
+//     */
+//    sVERSION         = @"1.0.1";                                                                                                                               /* 安全模块版本 */
+//    sDEVICE_FEATURES = @"iOS+iPhone Simulator+11.2+7C110115-2FD5-4B66-A4BA-95AA9C87A379+7+undefine+C4:B3:01:B7:D2:ED+1334x750+undefine+(null)+00000000000";    /* 设备特征信息 */
+//    sTERM_ID         = @"201801291418400003";                                                                                                                  /* 终端编号 */
+//    sSEC_PIN         = @"222222";                                                                                                                              /* 安全模块PIN码 */
+//    bDFV_1           = @"07069907501C3EA7AF024C0B4D82EAC1A87CDF89E0CCEAB3D138F6E61D5B9822";                                                                    /* 设备特征值SM3(DFC) DFC：设备特征码*/
+//    bDFV_2           = @"D6826046EE8D4B1A0CD9907A7A82A886C24B0779DC5E8603715797BD08CB30F2";                                                                    /* 设备特征值SM3(DFC\nTERMID) DFC：设备特征码*/
+//    bZCODE           = @"98A3FC41267154F75A1D5885D7F12768D7665B4FDFD4A223D2980613364120D5";                                                                    /* 安全认证码 */
+//    bRANDS           = @"3DDFCBCE2532CE3872DD94A511BEFB813378A8220A777D0762C205B34BC54143";                                                                    /* 内部随机数 */
+//    bTOKEN           = @"0DEEFBFC1501FF0B4AE6A4972C89CBB9034198623D3D4344568B35F67B837073";                                                                    /* 外部随机数 */
+//    bZW_KEY          = @"317494F99C64BE61F4AD5240D4E76D99";                                                                                                    /* 动态协商秘钥ZW */
+//    bSESSION_ID      = @"3230313830313239313432333238303030303030303030303030303030303030";                                                                    /* 会话标识 */
 }
 
 #pragma mark - 获取安全模块版本号
@@ -399,8 +414,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     /* 终端编号签名验签 */
     unsigned char sign_r[32], sign_s[32], signData[64];
     int idx = 0;
-    //    memcpy(sign_r, [[signR dataUsingEncoding:NSUTF8StringEncoding] bytes], 32);
-    //    memcpy(sign_s, [[signS dataUsingEncoding:NSUTF8StringEncoding] bytes], 32);
     memcpy(signData, [[NIST_Tool nsdataFromHexString:termSign] bytes], 64);
     for (int i = 0; i < 32; i++)
     {
@@ -412,12 +425,7 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     }
     NSString * sign_r1 = [NIST_Tool stringFromByte:sign_r len:32];
     NSString * sign_s1 = [NIST_Tool stringFromByte:sign_s len:32];
-    //    if (0 != [NIST_SSL sm2_verify:px py:py za:za msg:[NIST_Tool hexStringFromString:msg] signR:sign_r1 signS:sign_s1])
-    //    {
-    //        NSLog(@"终端编号签名验签");
-    //        return -1;
-    //    }
-    if (0 != [NIST_SSL sm2_verify:px py:py za:za msg:msg signR:sign_r1 signS:sign_s1])
+    if (0 != [NIST_SSL sm2_verify:px py:py za:za msg:[NIST_Tool hexStringFromString:msg] signR:sign_r1 signS:sign_s1])
     {
         NSLog(@"终端编号签名验签失败");
         NSDictionary * dic = @{
@@ -440,16 +448,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
            failure:(failure)failure
 {
     /* 终端编号核验 */
-//    if ([self checkTermId])
-//    {
-//        NSLog(@"终端编号核验失败");
-//        NSDictionary * dic = @{
-//                               @"ErrorCode":[NSString stringWithFormat:@"%ld",NIST_TERMINAL_NUMBER_VERIFICATION_FAILED],
-//                               @"Msg":@"终端编号核验失败"
-//                               };
-//        failure(dic);
-//        return;
-//    }
     __block NSDictionary * dict;
     [[NIST_WB_SDK shareInstance]checkTermId:^(NSDictionary *data) {
         dict = data;
@@ -479,12 +477,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     NSString * ftermId = [[NIST_Read_Write shareInstance]termId];
     NSString * fzcode = [[NIST_Read_Write shareInstance]zcode];
     NSString * zcode = [NIST_SSL sm3:ftermId];
-    //    [NIST_SSL encryptZTA:zcode ciphertxt:&zcode];
-    //    [NIST_SSL decryptZTB:zcode plaintxt:&zcode];
-    //    [NIST_SSL encryptZUA:zcode ciphertxt:&zcode];
-    //    [NIST_SSL decryptZUB:zcode plaintxt:&zcode];
-    //    [NIST_SSL encryptZSA:zcode ciphertxt:&zcode];
-    //    [NIST_SSL decryptZSB:zcode plaintxt:&zcode];
     if ( 0 != [NIST_SSL data:zcode zcode:&zcode])
     {
         NSLog(@"计算ZCODE失败");
@@ -523,7 +515,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     if (sDEVICE_FEATURES == nil || sDEVICE_FEATURES.length == 0)
     {
         NSLog(@"枚举硬件特征信息错误");
-//        [self probeDeviceFeatures];
         __block NSDictionary * dic;
         [[NIST_WB_SDK shareInstance]probeDeviceFeatures:^(NSDictionary *data) {
             dic = data;
@@ -541,7 +532,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     /* 判断TERM_ID是否为空 */
     if (sTERM_ID == nil || sTERM_ID.length == 0)
     {
-//        [self checkTermId];
         __block NSDictionary * dic;
         [[NIST_WB_SDK shareInstance]checkTermId:^(NSDictionary *data) {
             dic = data;
@@ -596,7 +586,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     if (sDEVICE_FEATURES == nil || sDEVICE_FEATURES.length == 0)
     {
         NSLog(@"枚举的硬件特征信息错误");
-//        [self probeDeviceFeatures];
         __block NSDictionary * dic;
         [[NIST_WB_SDK shareInstance]probeDeviceFeatures:^(NSDictionary *data) {
             dic = data;
@@ -624,11 +613,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     if (sSEC_PIN == nil || sSEC_PIN.length == 0)
     {
         NSLog(@"sSEC_PIN为空");
-        //        if (![self setSecPin:0 pin:@""])
-        //        {
-        //            NSLog(@"设置PIN码失败");
-        //            return 0;
-        //        }
         return;
     }
     
@@ -638,7 +622,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     NSString * timeStr = [NSString stringWithFormat:@"%f",time];
     unsigned long T0 = [timeStr longLongValue];
     timeStr = [NSString stringWithFormat:@"%lu",T0];
-//    bRANDS = [self generateRands:timeStr len:32];
     __block NSDictionary * dict;
     [[NIST_WB_SDK shareInstance]generateRands:timeStr len:32 success:^(NSDictionary *data) {
         dict = data;
@@ -657,7 +640,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     
     NSMutableString * msgBuffer = [[NSMutableString alloc]init];
     /* 安全模块版本号 */
-//    [msgBuffer appendString:[self getVersion]];
     [[NIST_WB_SDK shareInstance]getVersion:^(NSDictionary *data) {
         dict = data;
     } failure:^(NSDictionary *error) {
@@ -865,8 +847,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     /* 终端编号签名验签 */
     unsigned char sign_r[32], sign_s[32], signData[64];
     int idx = 0;
-    //    memcpy(sign_r, [[signR dataUsingEncoding:NSUTF8StringEncoding] bytes], 32);
-    //    memcpy(sign_s, [[signS dataUsingEncoding:NSUTF8StringEncoding] bytes], 32);
     memcpy(signData, [[NIST_Tool nsdataFromHexString:termSign] bytes], 64);
     for (int i = 0; i < 32; i++)
     {
@@ -878,13 +858,7 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     }
     NSString * sign_r1 = [NIST_Tool stringFromByte:sign_r len:32];
     NSString * sign_s1 = [NIST_Tool stringFromByte:sign_s len:32];
-    NSLog(@"***********%@",[NIST_Tool hexStringFromString:msg]);
-    //    if (0 != [NIST_SSL sm2_verify:px py:py za:za msg:[NIST_Tool hexStringFromString:msg] signR:sign_r1 signS:sign_s1])
-    //    {
-    //        NSLog(@"终端编号签名验签失败");
-    //        return -1;
-    //    }
-    if (0 != [NIST_SSL sm2_verify:px py:py za:za msg:msg signR:sign_r1 signS:sign_s1])
+    if (0 != [NIST_SSL sm2_verify:px py:py za:za msg:[NIST_Tool hexStringFromString:msg] signR:sign_r1 signS:sign_s1])
     {
         NSLog(@"终端编号签名验签失败");
         NSDictionary * dic = @{
@@ -898,12 +872,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     
     /* 计算Zcode */
     NSString * zcode = [NIST_SSL sm3:termId];
-    //    [NIST_SSL encryptZTA:zcode ciphertxt:&zcode];
-    //    [NIST_SSL decryptZTB:zcode plaintxt:&zcode];
-    //    [NIST_SSL encryptZUA:zcode ciphertxt:&zcode];
-    //    [NIST_SSL decryptZUB:zcode plaintxt:&zcode];
-    //    [NIST_SSL encryptZSA:zcode ciphertxt:&zcode];
-    //    [NIST_SSL decryptZSB:zcode plaintxt:&zcode];
     if ( 0 != [NIST_SSL data:zcode zcode:&zcode])
     {
         NSLog(@"计算ZCODE失败");
@@ -946,16 +914,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     }
     
     /* 安全模块自检失败 */
-//    if ([self selfCheckZSec])
-//    {
-//        NSLog(@"安全模块自检失败");
-//        NSDictionary * dic = @{
-//                               @"ErrorCode":[NSString stringWithFormat:@"%ld",NIST_DEVICE_FAILED_TO_SELF_CHECK],
-//                               @"Msg":@"安全模块自检失败"
-//                               };
-//        failure(dic);
-//        return;
-//    }
     __block NSDictionary * dict;
     [[NIST_WB_SDK shareInstance]selfCheckZSec:^(NSDictionary *data) {
         dict = data;
@@ -971,7 +929,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     /* 计算DFV2 */
     if (bDFV_2 == nil || bDFV_2.length == 0)
     {
-//        [self generateDFV2:sDEVICE_FEATURES];
         [[NIST_WB_SDK shareInstance]generateDFV2:sDEVICE_FEATURES success:^(NSDictionary *data) {
             dict = data;
         } failure:^(NSDictionary *error) {
@@ -990,7 +947,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     NSString * timeStr = [NSString stringWithFormat:@"%f",time];
     unsigned long T0 = [timeStr longLongValue];
     timeStr = [NSString stringWithFormat:@"%lu",T0];
-//    bRANDS = [self generateRands:timeStr len:32];
     [[NIST_WB_SDK shareInstance]generateRands:timeStr len:32 success:^(NSDictionary *data) {
         dict = data;
     } failure:^(NSDictionary *error) {
@@ -1009,7 +965,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     /* 安全模块版本+终端编号+安全认证码+DFV2+随机数+T0 */
     NSMutableString * msgBuffer = [[NSMutableString alloc]init];
     /* 安全模块版本 */
-//    [msgBuffer appendString:[self getVersion]];
     [[NIST_WB_SDK shareInstance]getVersion:^(NSDictionary *data) {
         dict = data;
     } failure:^(NSDictionary *error) {
@@ -1179,14 +1134,7 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
         return;
     }
     bSESSION_ID = session_id;
-    /* 判断是否缓存session_id */
-    //    if (![[NIST_Read_Write shareInstance]session_id])
-    //    {
-    //        NSLog(@"缓存的session_id失败");
-    //        NSLog(@"%@",[NIST_Tool stringFromHexString:bSESSION_ID]);
-    //        [[NIST_Read_Write shareInstance]setValue:bSESSION_ID forKey:[NIST_Tool stringFromHexString:bSESSION_ID]];
-    //        return -1;
-    //    }
+
     NSDictionary * dic = @{
                            @"ErrorCode":[NSString stringWithFormat:@"%ld",(long)NIST_SUCCESS],
                            @"Msg":NIST_CHALLEGNE_CODE_REVERSE_AUTHENTICATION_PASS
@@ -1205,7 +1153,7 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     {
         NSLog(@"用户绑定申请参数错误");
         NSDictionary * dic = @{
-                               @"ErrorCode":[NSString stringWithFormat:@"%ld",NIST_USER_BINDING_APPLICATION_PARAMETER_ERROR],
+                               @"ErrorCode":[NSString stringWithFormat:@"%d",NIST_USER_BINDING_APPLICATION_PARAMETER_ERROR],
                                @"Msg":NIST_USER_BINDING_APPLICATION_PARAMETER_ERROR_MSG
                                };
         failure(dic);
@@ -1226,25 +1174,10 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     }
     if (bSESSION_ID == nil || bSESSION_ID.length == 0)
     {
-//        NSLog(@"计算DFV2错误");
-//        NSDictionary * dic = @{
-//                               @"ErrorCode":[NSString stringWithFormat:@"%ld",NIST_CALCULATE_BDFV2_ERROR],
-//                               @"Msg":@"计算DFV2错误"
-//                               };
-//        failure(dic);
         NSLog(@"bSESSION_ID为空");
         return;
     }
-//    if ([self selfCheckZSec])
-//    {
-//        NSLog(@"设备自检失败");
-//        NSDictionary * dic = @{
-//                               @"ErrorCode":[NSString stringWithFormat:@"%ld",NIST_DEVICE_FAILED_TO_SELF_CHECK],
-//                               @"Msg":@"设备自检失败"
-//                               };
-//        failure(dic);
-//        return;
-//    }
+
     [[NIST_WB_SDK shareInstance]selfCheckZSec:^(NSDictionary *data) {
         dict = data;
     } failure:^(NSDictionary *error) {
@@ -1262,7 +1195,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     NSString * timeStr = [NSString stringWithFormat:@"%f",time];
     unsigned long T0 = [timeStr longLongValue];
     timeStr = [NSString stringWithFormat:@"%lu",T0];
-//    bRANDS = [self generateRands:timeStr len:32];
     [[NIST_WB_SDK shareInstance]generateRands:timeStr len:32 success:^(NSDictionary *data) {
         dict = data;
     } failure:^(NSDictionary *error) {
@@ -1281,7 +1213,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     /* 安全模块版本+终端编号+安全认证码+用户标识+随机数+T0 */
     NSMutableString * msgBuffer = [[NSMutableString alloc]init];
     /* 安全模块版本 */
-//    [msgBuffer appendString:[self getVersion]];
     [[NIST_WB_SDK shareInstance]getVersion:^(NSDictionary *data) {
         dict = data;
     } failure:^(NSDictionary *error) {
@@ -1579,11 +1510,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     if (sSEC_PIN == nil || sSEC_PIN.length == 0)
     {
         NSLog(@"未预先输入安全模块PIN码");
-        //        if (![self setSecPin:1 pin:@""])
-        //        {
-        //            NSLog(@"安全PIN码设置失败");
-        //            return 0;
-        //        }
         return;
     }
     
@@ -1593,7 +1519,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     NSString * timeStr = [NSString stringWithFormat:@"%f",time];
     unsigned long T0 = [timeStr longLongValue];
     timeStr = [NSString stringWithFormat:@"%lu",T0];
-//    bRANDS = [self generateRands:timeStr len:32];
     __block NSDictionary * dict;
     [[NIST_WB_SDK shareInstance]generateRands:timeStr len:32 success:^(NSDictionary *data) {
         dict = data;
@@ -1669,11 +1594,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
                         failure:(failure)failure
 {
     /* 判断参数 */
-    //    if (userId == nil || userId.length ==0 || bussType == nil || bussType.length == 0 || token == nil ||token.length == 0 || bRANDS == nil || bRANDS.length == 0 || bTOKEN == nil || bTOKEN.length == 0)
-    //    {
-    //        NSLog(@"秘钥协商数据参数出错");
-    //        return 0;
-    //    }
     if (userId == nil || userId.length ==0 || bussType == nil || bussType.length == 0 || token == nil ||token.length == 0 || bRANDS == nil || bRANDS.length == 0)
     {
         NSLog(@"秘钥协商数据请求参数出错");
@@ -1985,10 +1905,10 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     tokens = [temp componentsSeparatedByString:SPLIT];
     if (tokens == nil || tokens.count < 4)
     {
-        NSLog(@"秘钥协商认证返回的token错误");
+        NSLog(@"bZW_KEY计算错误");
         NSDictionary * dic = @{
-                               @"ErrorCode":[NSString stringWithFormat:@"%d",NIST_SECRET_KEY_NEGOTIATION_AUTHENTICATION_RETURNED_TOKEN_ERROR],
-                               @"Msg":NIST_SECRET_KEY_NEGOTIATION_AUTHENTICATION_RETURNED_TOKEN_ERROR_MSG
+                               @"ErrorCode":[NSString stringWithFormat:@"%d",NIST_BZWKEY_CALCULATE_ERROR],
+                               @"Msg":NIST_BZWKEY_CALCULATE_ERROR_MSG
                                };
         failure(dic);
         return;
@@ -2106,19 +2026,8 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     char ver[48];
     getVersion(ver);
     NSString * version = [NSString stringWithFormat:@"%s",ver];
-    
+
     /* 枚举特征信息 */
-//    NSString * devFeature = [self probeDeviceFeatures];
-//    if (devFeature == nil || devFeature.length == 0)
-//    {
-//        NSLog(@"枚举硬件特征信息错误");
-//        NSDictionary * dic = @{
-//                               @"ErrorCode":[NSString stringWithFormat:@"%ld",(long)NIST_ENUMERATE_HARDWARE_FEATURE_INFORMATION_ERROR],
-//                               @"Msg":@"枚举硬件特征信息错误"
-//                               };
-//        failure(dic);
-//        return;
-//    }
     __block NSDictionary * dict;
     NSString * devFeature;
     [[NIST_WB_SDK shareInstance]probeDeviceFeatures:^(NSDictionary *data) {
@@ -2198,8 +2107,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     {
         return -1;
     }
-    //    NSData * plainNSData = [plain dataUsingEncoding:NSUTF8StringEncoding];
-    //    NSData * keyNSData = [key dataUsingEncoding:NSUTF8StringEncoding];
     NSData * plainNSData = [NIST_Tool nsdataFromHexString:plain];
     NSData * keyNSData = [NIST_Tool nsdataFromHexString:bZW_KEY];
     unsigned char plainData[[plainNSData length]];
@@ -2223,8 +2130,6 @@ static NIST_WB_SDK * nist_wb_sdk = nil;
     {
         return -1;
     }
-    //    NSData * ciphertNSData = [cipher dataUsingEncoding:NSUTF8StringEncoding];
-    //    NSData * keyNSData = [key dataUsingEncoding:NSUTF8StringEncoding];
     NSData * ciphertNSData = [NIST_Tool nsdataFromHexString:cipher];
     NSData * keyNSData = [NIST_Tool nsdataFromHexString:bZW_KEY];
     unsigned char cipherData[[ciphertNSData length]];

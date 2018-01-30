@@ -127,7 +127,7 @@ static NSUInteger PROTOCOL_VERSION = 7;                                         
         NSLog(@"socket 未连通");
         if (callback)
         {
-            callback([NIST_GCDErrorManager errorWithErrorCode:3],
+            callback([NIST_GCDErrorManager errorWithErrorCode:1003],
                      nil);
         }
         return;
@@ -175,27 +175,6 @@ static NSUInteger PROTOCOL_VERSION = 7;                                         
                                                              keys:keys
                                                  withStartElement:@"NIST_MESSAGE"
                                                    isFirstElement:YES];
-
-   /* 第二种NSDictionary 转XML字符串的方法 */
-//    NSDictionary * dict = @{
-//                            @"NIST_MESSAGE": @{
-//                                    @"MSG_VERSION": @"1.0",
-//                                    @"MSG_TYPE": @"request",
-//                                    @"REQ_SYSTEM": @"NIST-SVR",
-//                                    @"REQ_SYSTEM_CODE":  @"SVR001",
-//                                    @"SVR_SYSTEM": @"NIST-SEC",
-//                                    @"SVR_SYSTEM_CODE": @"SEC001",
-//                                    @"REQ_DATE": @"20171012",
-//                                    @"REQ_TIME": @"123059",
-//                                    @"REQ_DEALNO": @"2017000001",
-//                                    @"SVR_CLASS": @"SEC",
-//                                    @"SVR_CODE": @"0001",
-//                                    @"MSG_BODY": body,
-//                                    @"MAC": @"报文认证码"
-//                                    }
-//                            };
-
-//    NSString * requestBody = [XMLWriter XMLStringFromDictionary:dict withHeader:YES];
     NSLog(@"writeDataXML:%@",requestBody);
     [self.socketManager socketWriteData:requestBody];
 }
@@ -238,7 +217,7 @@ static NSUInteger PROTOCOL_VERSION = 7;                                         
         [self.requestsMap setObject:callback forKey:blockRequestID];/* 缓存回调的block（根据请求的时间戳为Key）*/
     }
     
-    /* 第一种NSDictionary 转 XML字符串的方法 */
+    /* NSDictionary 转 XML字符串的方法 */
     NSArray * keys = @[
                        @"MSG_VERSION",
                        @"MSG_TYPE",
@@ -397,25 +376,39 @@ static NSUInteger PROTOCOL_VERSION = 7;                                         
     NIST_GCDAsyncSocketRequestModel * socketRequestModel = [[NIST_GCDAsyncSocketRequestModel alloc]init];
     socketRequestModel.MSG_VERSION     = @"1.0";
     socketRequestModel.MSG_TYPE        = @"request";
-    socketRequestModel.REQ_SYSTEM      = @"NIST-SVR";
-    socketRequestModel.REQ_SYSTEM_CODE = @"SVR001";
-    socketRequestModel.SVR_SYSTEM      = @"NIST-SEC";
-    socketRequestModel.SVR_SYSTEM_CODE = @"SEC001";
-    socketRequestModel.REQ_DATE        = @"20171012";
-    socketRequestModel.REQ_TIME        = @"123059";
-    socketRequestModel.REQ_DEALNO      = @"2017000001";
-    socketRequestModel.SVR_CLASS       = @"SEC";
-    socketRequestModel.SVR_CODE        = @"0001";
-    socketRequestModel.MSG_BODY        = @{
-                                           @"KEY_VERSION": @"1.0.0.0",
-                                           @"KEY_USAGE":@"S",
-                                           @"ALGID": @"SM2",
-                                           @"KEY_BITS": @"256"
-                                           };
-    socketRequestModel.MAC =             @"报文认证码";
+    socketRequestModel.REQ_SYSTEM      = @"NIST-APP";
+    socketRequestModel.REQ_SYSTEM_CODE = [NSString stringWithFormat:@"APP%@",@"0000"];
+    socketRequestModel.SVR_SYSTEM      = @"NIST-AS";
+    socketRequestModel.SVR_SYSTEM_CODE = [NIST_Device_Info getDeviceModel];
+    socketRequestModel.REQ_DATE        = [Tool getYMDTime];
+    socketRequestModel.REQ_TIME        = [Tool getHMSTime];
+    socketRequestModel.REQ_DEALNO      = [Tool getcurrenttimestampS];
+    socketRequestModel.SVR_CLASS       = @"APP";
+    socketRequestModel.SVR_CODE        = @"0000";
+    socketRequestModel.MSG_BODY        = @{};
+    socketRequestModel.MAC             = @"报文认证码";
     
-    /* 转化为xml字符串 */
-    NSString * requestBody = [XMLWriter XMLStringFromDictionary:[socketRequestModel toDictionary] withStartElement:@"NIST_MESSAGE" isFirstElement:YES];
+    /* NSDictionary 转 XML字符串的方法 */
+    NSArray * keys = @[
+                       @"MSG_VERSION",
+                       @"MSG_TYPE",
+                       @"REQ_SYSTEM",
+                       @"REQ_SYSTEM_CODE",
+                       @"SVR_SYSTEM",
+                       @"SVR_SYSTEM_CODE",
+                       @"REQ_DATE",
+                       @"REQ_TIME",
+                       @"REQ_DEALNO",
+                       @"SVR_CLASS",
+                       @"SVR_CODE",
+                       @"MSG_BODY",
+                       @"MAC"
+                       ];
+    NSString * requestBody = [NSDictionary convertDictionaryToXML:[socketRequestModel toDictionary]
+                                                             keys:keys
+                                                 withStartElement:@"NIST_MESSAGE"
+                                                   isFirstElement:YES];
+    NSLog(@"writeDataXML:%@",requestBody);
     [self.socketManager socketDidConnectBeginSendBeat:requestBody];
 }
 

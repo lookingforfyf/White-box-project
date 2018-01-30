@@ -123,9 +123,8 @@
       "scale" : "2x"
     },
     {
-      "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "222222副本 2-6.png",
+      "size" : "76x76",
       "scale" : "1x"
     },
     {
@@ -141,8 +140,9 @@
       "scale" : "2x"
     },
     {
-      "idiom" : "ios-marketing",
       "size" : "1024x1024",
+      "idiom" : "ios-marketing",
+      "filename" : "1024x1024.png",
       "scale" : "1x"
     }
   ],

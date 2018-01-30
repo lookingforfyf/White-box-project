@@ -144,14 +144,14 @@ NSString * const BusinessTableViewCell   = @"NIST_BusinessTableViewCell";
                                   @"REQ_DATA":request ? request : @""
                                   };
     WeakSelf(self)
-    [[NIST_GCDAsyncSocketCommunicationManager sharedInstance] socketWriteDataWithRequestType:NIST_GCDRequestType_ConnectionAuthAppraisal appCode:@"0009" requestBody:requestBody completion:^(NSError * _Nullable error, id  _Nullable data)
+    [[NIST_GCDAsyncSocketCommunicationManager sharedInstance] socketWriteDataWithRequestType:NIST_GCDRequestType_GetConversationsList appCode:@"0009" requestBody:requestBody completion:^(NSError * _Nullable error, id  _Nullable data)
      {
          StrongSelf(self)
          /* 回调处理 */
          if (error.code != 0)
          {
              NSLog(@"error:%@",error);
-             [Tool showHUD:[NSString stringWithFormat:@"%ld %@",error.code,error.localizedDescription] done:NO];
+             [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%ld ",error.localizedDescription,error.code] done:NO];
          }
          else
          {

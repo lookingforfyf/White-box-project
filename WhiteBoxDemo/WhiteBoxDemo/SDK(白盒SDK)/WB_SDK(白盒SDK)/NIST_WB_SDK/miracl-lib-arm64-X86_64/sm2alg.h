@@ -7,68 +7,67 @@
 extern "C" {
 #endif
 
-
-//hex字符串转字节流
-static void hex2bytes(const char * hex,
-                      int hlen,
-                      unsigned char * bytes)
-{
-	int n;
-	char cH4,cL4;
-
-	for (n = 0; n < hlen/2; n++)
-    {
-		cH4 = hex[2*n];
-		cL4 = hex[2*n+1];
-
-		cH4 = (cH4 >= '0' && cH4 <= '9')?(cH4 - '0'):(cH4);
-		cH4 = (cH4 >= 'a' && cH4 <= 'f')?(cH4 - 'a' + 10):(cH4);
-		cH4 = (cH4 >= 'A' && cH4 <= 'F')?(cH4 - 'A' + 10):(cH4);
-
-		cL4 = (cL4 >= '0' && cL4 <= '9')?(cL4 - '0'):(cL4);
-		cL4 = (cL4 >= 'a' && cL4 <= 'f')?(cL4 - 'a' + 10):(cL4);
-		cL4 = (cL4 >= 'A' && cL4 <= 'F')?(cL4 - 'A' + 10):(cL4);
-		
-		bytes[n] = (unsigned char)(cH4<<4 | cL4);
-	}
-}
-
-//字节流转hex字符串
-static void bytes2hex(const unsigned char* bytes,
-                      int blen,
-                      char* hex)
-{
-	int n, m = 0;
-	char hexMap[16] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
-
-	for (n = 0; n < blen; n++) {
-		hex[m++] = hexMap[(bytes[n]>>4)&0x0f];
-		hex[m++] = hexMap[bytes[n]&0x0f];
-	}
-}
-
-static void dump_byte(const unsigned char* bytes,
-                      int blen)
-{
-	const unsigned char * p = bytes;
-
-	while (blen > 16)
-	{
-		printf("\t%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x\n",
-			p[0], p[1], p[2], p[3], p[4], p[5], p[6], p[7], p[8], p[9], p[10], p[11], p[12], p[13], p[14], p[15]);
-		blen -= 16;
-		p += 16;
-	}
-
-	if (blen)
-	{
-		printf("\t");
-		while (blen--)	printf("%02x ", *p++);
-		printf("\n");
-	}
-	
-	printf("\n");
-}
+////hex字符串转字节流
+//static void hex2bytes(const char * hex,
+//                      int hlen,
+//                      unsigned char * bytes)
+//{
+//    int n;
+//    char cH4,cL4;
+//
+//    for (n = 0; n < hlen/2; n++)
+//    {
+//        cH4 = hex[2*n];
+//        cL4 = hex[2*n+1];
+//
+//        cH4 = (cH4 >= '0' && cH4 <= '9')?(cH4 - '0'):(cH4);
+//        cH4 = (cH4 >= 'a' && cH4 <= 'f')?(cH4 - 'a' + 10):(cH4);
+//        cH4 = (cH4 >= 'A' && cH4 <= 'F')?(cH4 - 'A' + 10):(cH4);
+//
+//        cL4 = (cL4 >= '0' && cL4 <= '9')?(cL4 - '0'):(cL4);
+//        cL4 = (cL4 >= 'a' && cL4 <= 'f')?(cL4 - 'a' + 10):(cL4);
+//        cL4 = (cL4 >= 'A' && cL4 <= 'F')?(cL4 - 'A' + 10):(cL4);
+//        
+//        bytes[n] = (unsigned char)(cH4<<4 | cL4);
+//    }
+//}
+//
+////字节流转hex字符串
+//static void bytes2hex(const unsigned char* bytes,
+//                      int blen,
+//                      char* hex)
+//{
+//    int n, m = 0;
+//    char hexMap[16] = {'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
+//
+//    for (n = 0; n < blen; n++) {
+//        hex[m++] = hexMap[(bytes[n]>>4)&0x0f];
+//        hex[m++] = hexMap[bytes[n]&0x0f];
+//    }
+//}
+//
+//static void dump_byte(const unsigned char* bytes,
+//                      int blen)
+//{
+//    const unsigned char * p = bytes;
+//
+//    while (blen > 16)
+//    {
+//        printf("\t%02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x %02x\n",
+//            p[0], p[1], p[2], p[3], p[4], p[5], p[6], p[7], p[8], p[9], p[10], p[11], p[12], p[13], p[14], p[15]);
+//        blen -= 16;
+//        p += 16;
+//    }
+//
+//    if (blen)
+//    {
+//        printf("\t");
+//        while (blen--)    printf("%02x ", *p++);
+//        printf("\n");
+//    }
+//    
+//    printf("\n");
+//}
 
 
 /*

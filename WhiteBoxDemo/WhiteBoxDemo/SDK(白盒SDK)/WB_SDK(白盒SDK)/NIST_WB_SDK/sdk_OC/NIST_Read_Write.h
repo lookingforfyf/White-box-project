@@ -114,7 +114,7 @@
  */
 - (NSString *)zcode;
 
-#pragma mark - session_id
+#pragma mark - SESSION_ID
 /**
  获取session_id
 

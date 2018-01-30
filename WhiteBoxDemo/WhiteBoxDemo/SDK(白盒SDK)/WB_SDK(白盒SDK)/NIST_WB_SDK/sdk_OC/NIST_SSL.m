@@ -88,7 +88,6 @@ static NIST_SSL * nist_ssl = nil;
     {
         return -1;
     }
-//    NSData * randNSData = [rand dataUsingEncoding:NSUTF8StringEncoding];
     NSData * randNSData = [NIST_Tool nsdataFromHexString:rand];
     unsigned char randData[[randNSData length]];
     unsigned char privkeyData[32];
@@ -140,14 +139,10 @@ static NIST_SSL * nist_ssl = nil;
     {
         return -1;
     }
-//    NSData * privkeyNSData = [privkey dataUsingEncoding:NSUTF8StringEncoding];
-//    NSData * zaNSData = [za dataUsingEncoding:NSUTF8StringEncoding];
-//    NSData * msgNSData = [msg dataUsingEncoding:NSUTF8StringEncoding];
-//    NSData * randNSData = [rand dataUsingEncoding:NSUTF8StringEncoding];
     NSData * privkeyNSData = [NIST_Tool nsdataFromHexString:privkey];
-    NSData * zaNSData = [NIST_Tool nsdataFromHexString:za];
-    NSData * msgNSData = [NIST_Tool nsdataFromHexString:msg];
-    NSData * randNSData = [NIST_Tool nsdataFromHexString:rand];
+    NSData * zaNSData      = [NIST_Tool nsdataFromHexString:za];
+    NSData * msgNSData     = [NIST_Tool nsdataFromHexString:msg];
+    NSData * randNSData    = [NIST_Tool nsdataFromHexString:rand];
     unsigned char privkeyData[[privkeyNSData length]];
     unsigned char zaData[[zaNSData length]];
     unsigned char msgData[[msgNSData length]];
@@ -184,15 +179,9 @@ static NIST_SSL * nist_ssl = nil;
     NSData * pxNSData    = [NIST_Tool nsdataFromHexString:px];
     NSData * pyNSData    = [NIST_Tool nsdataFromHexString:py];
     NSData * zaNSData    = [NIST_Tool nsdataFromHexString:za];
-//    NSData * msgNSData   = [NIST_Tool nsdataFromHexString:msg];
     NSData * signRNSData = [NIST_Tool nsdataFromHexString:signR];
     NSData * signSNSData = [NIST_Tool nsdataFromHexString:signS];
-//    NSData * pxNSData    = [px dataUsingEncoding:NSUTF8StringEncoding];
-//    NSData * pyNSData    = [py dataUsingEncoding:NSUTF8StringEncoding];
-//    NSData * zaNSData    = [za dataUsingEncoding:NSUTF8StringEncoding];
-    NSData * msgNSData   = [msg dataUsingEncoding:NSUTF8StringEncoding];
-//    NSData * signRNSData = [signR dataUsingEncoding:NSUTF8StringEncoding];
-//    NSData * signSNSData = [signS dataUsingEncoding:NSUTF8StringEncoding];
+    NSData * msgNSData   = [NIST_Tool nsdataFromHexString:msg];
     unsigned char pxData[[pxNSData length]];
     unsigned char pyData[[pyNSData length]];
     unsigned char zaData[[za length]];
@@ -221,11 +210,10 @@ static NIST_SSL * nist_ssl = nil;
     {
         return -1;
     }
-    NSData * pxNSData = [NIST_Tool nsdataFromHexString:px];
-    NSData * pyNSData = [NIST_Tool nsdataFromHexString:py];
-//    NSData * plainNSData = [plain dataUsingEncoding:NSUTF8StringEncoding];
+    NSData * pxNSData    = [NIST_Tool nsdataFromHexString:px];
+    NSData * pyNSData    = [NIST_Tool nsdataFromHexString:py];
     NSData * plainNSData = [NIST_Tool nsdataFromHexString:plain];
-//    NSData * randNSData = [rand dataUsingEncoding:NSUTF8StringEncoding];
+//    NSData * randNSData  = [rand dataUsingEncoding:NSUTF8StringEncoding];
     unsigned char pxData[[pxNSData length]];
     unsigned char pyData[[pyNSData length]];
     unsigned char plainData[[plainNSData length]];
@@ -251,10 +239,8 @@ static NIST_SSL * nist_ssl = nil;
     {
         return -1;
     }
-//    NSData * privkeyNSData = [privkey dataUsingEncoding:NSUTF8StringEncoding];
-//    NSData * cipherNSData = [cipher dataUsingEncoding:NSUTF8StringEncoding];
     NSData * privkeyNSData = [NIST_Tool nsdataFromHexString:privkey];
-    NSData * cipherNSData = [NIST_Tool nsdataFromHexString:cipher];
+    NSData * cipherNSData  = [NIST_Tool nsdataFromHexString:cipher];
     unsigned char privkeyData[[privkeyNSData length]];
     unsigned char cipherData[[cipherNSData length]];
     unsigned char plainData[[cipherNSData length] - 96];
@@ -278,10 +264,8 @@ static NIST_SSL * nist_ssl = nil;
     {
         return -1;
     }
-//    NSData * plainNSData = [plain dataUsingEncoding:NSUTF8StringEncoding];
-//    NSData * keyNSData = [key dataUsingEncoding:NSUTF8StringEncoding];
     NSData * plainNSData = [NIST_Tool nsdataFromHexString:plain];
-    NSData * keyNSData = [NIST_Tool nsdataFromHexString:key];
+    NSData * keyNSData   = [NIST_Tool nsdataFromHexString:key];
     unsigned char plainData[[plainNSData length]];
     unsigned char keyData[[keyNSData length]];
     unsigned char cipherData[[plainNSData length]];
@@ -303,10 +287,8 @@ static NIST_SSL * nist_ssl = nil;
     {
         return -1;
     }
-//    NSData * ciphertNSData = [cipher dataUsingEncoding:NSUTF8StringEncoding];
-//    NSData * keyNSData = [key dataUsingEncoding:NSUTF8StringEncoding];
     NSData * ciphertNSData = [NIST_Tool nsdataFromHexString:cipher];
-    NSData * keyNSData = [NIST_Tool nsdataFromHexString:key];
+    NSData * keyNSData     = [NIST_Tool nsdataFromHexString:key];
     unsigned char cipherData[[ciphertNSData length]];
     unsigned char keyData[[keyNSData length]];
     unsigned char plainData[[ciphertNSData length]];
@@ -330,8 +312,6 @@ static NIST_SSL * nist_ssl = nil;
     {
         return -1;
     }
-//    NSData * saltNSData = [salt dataUsingEncoding:NSUTF8StringEncoding];
-//    NSData * dataNSData = [data dataUsingEncoding:NSUTF8StringEncoding];
     NSData * saltNSData = [NIST_Tool nsdataFromHexString:salt];
     NSData * dataNSData = [NIST_Tool nsdataFromHexString:data];
     Byte * saltBytes = (Byte *)[saltNSData bytes];
@@ -353,34 +333,10 @@ static NIST_SSL * nist_ssl = nil;
     {
         return -1;
     }
-//    NSData * plaintxtNSData = [plaintxt dataUsingEncoding:NSUTF8StringEncoding];
     NSData * plaintxtNSData = [NIST_Tool nsdataFromHexString:plaintxt];
     unsigned char plaintxtData[[plaintxtNSData length]];
     memcpy(plaintxtData, [plaintxtNSData bytes], (int)[plaintxtNSData length]);
     int plen = (int)[plaintxtNSData length];
-//    int len = 0;
-//    if (plen/8 == 0)
-//    {
-//        len = 1;
-//    }
-//    if (plen/8 >= 1 && (plen%8) == 0)
-//    {
-//        len = plen/8;
-//    }
-//    if (plen/8 >= 1 && (plen%8) != 0)
-//    {
-//        len = plen/8 + 1;
-//    }
-//    unsigned long long cipherData[len];
-//    u64FromToU8(plaintxtData, plen, cipherData);
-//    if (len != encryptZTA(cipherData, len, cipherData))
-//    {
-//        return -1;
-//    }
-//    u8FromToU64(cipherData, len, plaintxtData);
-//    NSString * cipherStr = [NIST_Tool stringFromByte:plaintxtData len:plen];
-//    *ciphertxt = cipherStr;
-//    return 0;
     int rem = plen%8;
     int len = plen/8;
     if (rem != 0)
@@ -406,34 +362,9 @@ static NIST_SSL * nist_ssl = nil;
         return -1;
     }
     NSData * ciphertxtNSData = [NIST_Tool nsdataFromHexString:ciphertxt];
-//    NSData * ciphertxtNSData = [ciphertxt dataUsingEncoding:NSUTF8StringEncoding];
     unsigned char ciphertxtData[[ciphertxtNSData length]];
     memcpy(ciphertxtData, [ciphertxtNSData bytes],[ciphertxtNSData length]);
     int clen = (int)[ciphertxtNSData length];
-//    int len = 0;
-//    if (clen/8 == 0)
-//    {
-//        len = 1;
-//    }
-//    if (clen/8 >= 1 && (clen%8) == 0)
-//    {
-//        len = clen/8;
-//    }
-//    if (clen/8 >= 1 && (clen%8) != 0)
-//    {
-//        len = clen/8 + 1;
-//    }
-//    unsigned long long plaintxtData[len];
-//    u64FromToU8(ciphertxtData, clen, plaintxtData);
-//    if (len != decryptZTB(plaintxtData, len, plaintxtData))
-//    {
-//        return  -1;
-//    }
-//    u8FromToU64(plaintxtData, len, ciphertxtData);
-//    NSString * plaintxtStr = [NIST_Tool stringFromByte:ciphertxtData len:clen];
-//    *plaintxt = plaintxtStr;
-//    return 0;
-   
     int rem = clen%8;
     int len = clen/8;
     if (rem != 0)
@@ -461,34 +392,10 @@ static NIST_SSL * nist_ssl = nil;
     {
         return -1;
     }
-//    NSData * plaintxtNSData = [plaintxt dataUsingEncoding:NSUTF8StringEncoding];
     NSData * plaintxtNSData = [NIST_Tool nsdataFromHexString:plaintxt];
     unsigned char plaintxtData[[plaintxtNSData length]];
     memcpy(plaintxtData, [plaintxtNSData bytes], (int)[plaintxtNSData length]);
     int plen = (int)[plaintxtNSData length];
-//    int len = 0;
-//    if (plen/8 == 0)
-//    {
-//        len = 1;
-//    }
-//    if (plen/8 >= 1 && (plen%8) == 0)
-//    {
-//        len = plen/8;
-//    }
-//    if (plen/8 >= 1 && (plen%8) != 0)
-//    {
-//        len = plen/8 + 1;
-//    }
-//    unsigned long long cipherData[len];
-//    u64FromToU8(plaintxtData, plen, cipherData);
-//    if (0 != encryptZUA(cipherData, len, cipherData))
-//    {
-//        return -1;
-//    }
-//    u8FromToU64(cipherData, len, plaintxtData);
-//    NSString * cipherStr = [NIST_Tool stringFromByte:plaintxtData len:plen];
-//    *ciphertxt = cipherStr;
-//    return 0;
     int rem = plen%8;
     int len = plen/8;
     if (rem != 0)
@@ -513,35 +420,10 @@ static NIST_SSL * nist_ssl = nil;
     {
         return -1;
     }
-//    NSData * ciphertxtNSData = [ciphertxt dataUsingEncoding:NSUTF8StringEncoding];
     NSData * ciphertxtNSData = [NIST_Tool nsdataFromHexString:ciphertxt];
     unsigned char ciphertxtData[[ciphertxtNSData length]];
     memcpy(ciphertxtData, [ciphertxtNSData bytes],[ciphertxtNSData length]);
     int clen = (int)[ciphertxtNSData length];
-//    int len = 0;
-//    if (clen/8 == 0)
-//    {
-//        len = 1;
-//    }
-//    if (clen/8 >= 1 && (clen%8) == 0)
-//    {
-//        len = clen/8;
-//    }
-//    if (clen/8 >= 1 && (clen%8) != 0)
-//    {
-//        len = clen/8 + 1;
-//    }
-//    unsigned long long plaintxtData[len];
-//    u64FromToU8(ciphertxtData, clen, plaintxtData);
-//    if (0 != decryptZUB(plaintxtData, len, plaintxtData))
-//    {
-//        return  -1;
-//    }
-//    u8FromToU64(plaintxtData, len, ciphertxtData);
-//    NIST_u8FromToU64(plaintxtData, ciphertxtData, len);
-//    NSString * plaintxtStr = [NIST_Tool stringFromByte:ciphertxtData len:clen];
-//    *plaintxt = plaintxtStr;
-//    return 0;
     int rem = clen%8;
     int len = clen/8;
     if (rem != 0)
@@ -569,34 +451,10 @@ static NIST_SSL * nist_ssl = nil;
     {
         return -1;
     }
-//    NSData * plaintxtNSData = [plaintxt dataUsingEncoding:NSUTF8StringEncoding];
     NSData * plaintxtNSData = [NIST_Tool nsdataFromHexString:plaintxt];
     unsigned char plaintxtData[[plaintxtNSData length]];
     memcpy(plaintxtData, [plaintxtNSData bytes], (int)[plaintxtNSData length]);
     int plen = (int)[plaintxtNSData length];
-//    int len = 0;
-//    if (plen/8 == 0)
-//    {
-//        len = 1;
-//    }
-//    if (plen/8 >= 1 && (plen%8) == 0)
-//    {
-//        len = plen/8;
-//    }
-//    if (plen/8 >= 1 && (plen%8) != 0)
-//    {
-//        len = plen/8 + 1;
-//    }
-//    unsigned long long cipherData[len];
-//    u64FromToU8(plaintxtData, plen, cipherData);
-//    if (0 != encryptZSA(cipherData, len, cipherData))
-//    {
-//        return -1;
-//    }
-//    u8FromToU64(cipherData, len, plaintxtData);
-//    NSString * cipherStr = [NIST_Tool stringFromByte:plaintxtData len:plen];
-//    *ciphertxt = cipherStr;
-//    return 0;
     int rem = plen%8;
     int len = plen/8;
     if (rem != 0)
@@ -621,34 +479,10 @@ static NIST_SSL * nist_ssl = nil;
     {
         return -1;
     }
-//    NSData * ciphertxtNSData = [ciphertxt dataUsingEncoding:NSUTF8StringEncoding];
     NSData * ciphertxtNSData = [NIST_Tool nsdataFromHexString:ciphertxt];
     unsigned char ciphertxtData[[ciphertxtNSData length]];
     memcpy(ciphertxtData, [ciphertxtNSData bytes],[ciphertxtNSData length]);
     int clen = (int)[ciphertxtNSData length];
-//    int len = 0;
-//    if (clen/8 == 0)
-//    {
-//        len = 1;
-//    }
-//    if (clen/8 >= 1 && (clen%8) == 0)
-//    {
-//        len = clen/8;
-//    }
-//    if (clen/8 >= 1 && (clen%8) != 0)
-//    {
-//        len = clen/8 + 1;
-//    }
-//    unsigned long long plaintxtData[len];
-//    u64FromToU8(ciphertxtData, clen, plaintxtData);
-//    if (0 != decryptZSB(plaintxtData, len, plaintxtData))
-//    {
-//        return  -1;
-//    }
-//    u8FromToU64(plaintxtData, len, ciphertxtData);
-//    NSString * plaintxtStr = [NIST_Tool stringFromByte:ciphertxtData len:clen];
-//    *plaintxt = plaintxtStr;
-//    return 0;
     int rem = clen%8;
     int len = clen/8;
     if (rem != 0)
@@ -676,34 +510,10 @@ static NIST_SSL * nist_ssl = nil;
     {
         return -1;
     }
-//    NSData * plaintxtNSData = [plaintxt dataUsingEncoding:NSUTF8StringEncoding];
     NSData * plaintxtNSData = [NIST_Tool nsdataFromHexString:plaintxt];
     unsigned char plaintxtData[[plaintxtNSData length]];
     memcpy(plaintxtData, [plaintxtNSData bytes], (int)[plaintxtNSData length]);
     int plen = (int)[plaintxtNSData length];
-//    int len = 0;
-//    if (plen/8 == 0)
-//    {
-//        len = 1;
-//    }
-//    if (plen/8 >= 1 && (plen%8) == 0)
-//    {
-//        len = plen/8;
-//    }
-//    if (plen/8 >= 1 && (plen%8) != 0)
-//    {
-//        len = plen/8 + 1;
-//    }
-//    unsigned long long cipherData[len];
-//    u64FromToU8(plaintxtData, plen, cipherData);
-//    if (0 != encryptZWA(cipherData, len, cipherData))
-//    {
-//        return -1;
-//    }
-//    u8FromToU64(cipherData, len, plaintxtData);
-//    NSString * cipherStr = [NIST_Tool stringFromByte:plaintxtData len:plen];
-//    *ciphertxt = cipherStr;
-//    return 0;
     int rem = plen%8;
     int len = plen/8;
     if (rem != 0)
@@ -728,34 +538,10 @@ static NIST_SSL * nist_ssl = nil;
     {
         return -1;
     }
-//    NSData * ciphertxtNSData = [ciphertxt dataUsingEncoding:NSUTF8StringEncoding];
     NSData * ciphertxtNSData = [NIST_Tool nsdataFromHexString:ciphertxt];
     unsigned char ciphertxtData[[ciphertxtNSData length]];
     memcpy(ciphertxtData, [ciphertxtNSData bytes],[ciphertxtNSData length]);
     int clen = (int)[ciphertxtNSData length];
-//    int len = 0;
-//    if (clen/8 == 0)
-//    {
-//        len = 1;
-//    }
-//    if (clen/8 >= 1 && (clen%8) == 0)
-//    {
-//        len = clen/8;
-//    }
-//    if (clen/8 >= 1 && (clen%8) != 0)
-//    {
-//        len = clen/8 + 1;
-//    }
-//    unsigned long long plaintxtData[len];
-//    u64FromToU8(ciphertxtData, clen, plaintxtData);
-//    if (0 != decryptZWB(plaintxtData, len, plaintxtData))
-//    {
-//        return  -1;
-//    }
-//    u8FromToU64(plaintxtData, len, ciphertxtData);
-//    NSString * plaintxtStr = [NIST_Tool stringFromByte:ciphertxtData len:clen];
-//    *plaintxt = plaintxtStr;
-//    return 0;
     int rem = clen%8;
     int len = clen/8;
     if (rem != 0)

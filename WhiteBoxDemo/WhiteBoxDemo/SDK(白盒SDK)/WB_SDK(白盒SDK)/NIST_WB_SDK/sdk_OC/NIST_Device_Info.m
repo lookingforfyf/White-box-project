@@ -161,7 +161,7 @@ static NIST_Device_Info * nist_device_info = nil;
 #pragma mark - 获取设备序列号
 + (NSString *)getDeviceSerialNumber
 {
-    return [NIST_UUID uuidForDevice];/* 目前苹果禁用获取设备序列号，目前采用NIST_UUID 实现UDID的功能 */
+    return [NIST_UUID obtainUUID];/* 目前苹果禁用获取设备序列号，目前采用UUID+Keychain的方式 实现UDID的功能 */
 }
 
 #pragma mark - 获取CPU型号

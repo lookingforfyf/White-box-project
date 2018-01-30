@@ -214,7 +214,7 @@
         }];
         if ([[dic objectForKey:@"ErrorCode"] integerValue] != 100000)
         {
-            [Tool showHUD:[dic objectForKey:@"Msg"] done:NO];
+            [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%@",[dic objectForKey:@"Msg"],[dic objectForKey:@"ErrorCode"]] done:NO];
             return;
         }
         else
@@ -227,13 +227,13 @@
                                       @"REQ_DATA": request ? request : @"",
                                       };
         
-        [[NIST_GCDAsyncSocketCommunicationManager sharedInstance] socketWriteDataWithRequestType:NIST_GCDRequestType_ConnectionAuthAppraisal appCode:@"0000" requestBody:requestBody completion:^(NSError * _Nullable error, id  _Nullable data)
+        [[NIST_GCDAsyncSocketCommunicationManager sharedInstance] socketWriteDataWithRequestType:NIST_GCDRequestType_GetConversationsList appCode:@"0000" requestBody:requestBody completion:^(NSError * _Nullable error, id  _Nullable data)
          {
              /* 回调处理 */
              if (error.code != 0)
              {
                  NSLog(@"error:%@",error);
-                 [Tool showHUD:[NSString stringWithFormat:@"%ld %@",error.code,error.localizedDescription] done:NO];
+                 [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%ld ",error.localizedDescription,error.code] done:NO];
              }
              else
              {
@@ -241,7 +241,6 @@
                  NSLog(@"callback data:%@",data);
                  NSError * error;
                  NIST_GCDAsyncSocketResponseModel * responseModel = [[NIST_GCDAsyncSocketResponseModel alloc]initWithString:data error:&error];
-//                 [[NIST_WB_SDK shareInstance]installSecModule:responseModel.NIST_MESSAGE.MSG_BODY.RESP_DATA.text];
                  [[NIST_WB_SDK shareInstance]installSecModule:responseModel.NIST_MESSAGE.MSG_BODY.RESP_DATA.text success:^(NSDictionary *data) {
                      NSLog(@"data:%@",data);
                  } failure:^(NSDictionary *error) {
@@ -266,7 +265,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 if ([[dic objectForKey:@"ErrorCode"] integerValue] != 100000)
                 {
-                    [Tool showHUD:[dic objectForKey:@"Msg"] done:NO];
+                    [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%@",[dic objectForKey:@"Msg"],[dic objectForKey:@"ErrorCode"]] done:NO];
                 }
                 else
                 {
@@ -291,7 +290,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 if ([[dic objectForKey:@"ErrorCode"] integerValue] != 100000)
                 {
-                    [Tool showHUD:[dic objectForKey:@"Msg"] done:NO];
+                    [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%@",[dic objectForKey:@"Msg"],[dic objectForKey:@"ErrorCode"]] done:NO];
                 }
                 else
                 {
@@ -320,7 +319,7 @@
             }];
             if ([[dic objectForKey:@"ErrorCode"] integerValue] != 100000)
             {
-                [Tool showHUD:[dic objectForKey:@"Msg"] done:NO];
+                [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%@",[dic objectForKey:@"Msg"],[dic objectForKey:@"ErrorCode"]] done:NO];
                 return;
             }
             
@@ -339,7 +338,7 @@
             }];
             if ([[dic objectForKey:@"ErrorCode"] integerValue] != 100000)
             {
-                [Tool showHUD:[dic objectForKey:@"Msg"] done:NO];
+                [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%@",[dic objectForKey:@"Msg"],[dic objectForKey:@"ErrorCode"]] done:NO];
                 return;
             }
             else
@@ -356,7 +355,7 @@
             }];
             if ([[dic objectForKey:@"ErrorCode"] integerValue] != 100000)
             {
-                [Tool showHUD:[dic objectForKey:@"Msg"] done:NO];
+                [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%@",[dic objectForKey:@"Msg"],[dic objectForKey:@"ErrorCode"]] done:NO];
                 return;
             }
             else
@@ -371,14 +370,14 @@
                                           };
             
             WeakSelf(self)
-            [[NIST_GCDAsyncSocketCommunicationManager sharedInstance] socketWriteDataWithRequestType:NIST_GCDRequestType_ConnectionAuthAppraisal appCode:@"0001" requestBody:requestBody completion:^(NSError * _Nullable error, id  _Nullable data)
+            [[NIST_GCDAsyncSocketCommunicationManager sharedInstance] socketWriteDataWithRequestType:NIST_GCDRequestType_GetConversationsList appCode:@"0001" requestBody:requestBody completion:^(NSError * _Nullable error, id  _Nullable data)
              {
                  StrongSelf(self)
                  /* 回调处理 */
                  if (error.code != 0)
                  {
                      NSLog(@"error:%@",error);
-                     [Tool showHUD:[NSString stringWithFormat:@"%ld %@",error.code,error.localizedDescription] done:NO];
+                     [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%ld ",error.localizedDescription,error.code] done:NO];
                  }
                  else
                  {
@@ -406,7 +405,7 @@
             }];
             if ([[dic objectForKey:@"ErrorCode"] integerValue] != 100000)
             {
-                [Tool showHUD:[dic objectForKey:@"Msg"] done:NO];
+                [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%@",[dic objectForKey:@"Msg"],[dic objectForKey:@"ErrorCode"]] done:NO];
                 return;
             }
             else
@@ -426,7 +425,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 if ([[dic objectForKey:@"ErrorCode"] integerValue] != 100000)
                 {
-                    [Tool showHUD:[dic objectForKey:@"Msg"] done:NO];
+                    [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%@",[dic objectForKey:@"Msg"],[dic objectForKey:@"ErrorCode"]] done:NO];
                 }
                 else
                 {
@@ -452,7 +451,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 if ([[dic objectForKey:@"ErrorCode"] integerValue] != 100000)
                 {
-                    [Tool showHUD:[dic objectForKey:@"Msg"] done:NO];
+                    [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%@",[dic objectForKey:@"Msg"],[dic objectForKey:@"ErrorCode"]] done:NO];
                 }
                 else
                 {
@@ -476,7 +475,7 @@
         }];
         if ([[dic objectForKey:@"ErrorCode"] integerValue] != 100000)
         {
-            [Tool showHUD:[dic objectForKey:@"Msg"] done:NO];
+            [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%@",[dic objectForKey:@"Msg"],[dic objectForKey:@"ErrorCode"]] done:NO];
             return;
         }
         else
@@ -496,14 +495,14 @@
                                       };
         
         WeakSelf(self)
-        [[NIST_GCDAsyncSocketCommunicationManager sharedInstance] socketWriteDataWithRequestType:NIST_GCDRequestType_ConnectionAuthAppraisal appCode:@"0002" requestBody:requestBody completion:^(NSError * _Nullable error, id  _Nullable data)
+        [[NIST_GCDAsyncSocketCommunicationManager sharedInstance] socketWriteDataWithRequestType:NIST_GCDRequestType_GetConversationsList appCode:@"0002" requestBody:requestBody completion:^(NSError * _Nullable error, id  _Nullable data)
          {
              StrongSelf(self)
              /* 回调处理 */
              if (error.code != 0)
              {
                  NSLog(@"error:%@",error);
-                 [Tool showHUD:[NSString stringWithFormat:@"%ld %@",error.code,error.localizedDescription] done:NO];
+                 [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%ld ",error.localizedDescription,error.code] done:NO];
              }
              else
              {
@@ -529,7 +528,7 @@
         }];
         if ([[dic objectForKey:@"ErrorCode"] integerValue] != 100000)
         {
-            [Tool showHUD:[dic objectForKey:@"Msg"] done:NO];
+            [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%@",[dic objectForKey:@"Msg"],[dic objectForKey:@"ErrorCode"]] done:NO];
             return;
         }
         else
@@ -550,14 +549,14 @@
                                       @"REQ_DATA": request ? request : @"",
                                       };
         WeakSelf(self)
-        [[NIST_GCDAsyncSocketCommunicationManager sharedInstance] socketWriteDataWithRequestType:NIST_GCDRequestType_ConnectionAuthAppraisal appCode:@"0003" requestBody:requestBody completion:^(NSError * _Nullable error, id  _Nullable data)
+        [[NIST_GCDAsyncSocketCommunicationManager sharedInstance] socketWriteDataWithRequestType:NIST_GCDRequestType_GetConversationsList appCode:@"0003" requestBody:requestBody completion:^(NSError * _Nullable error, id  _Nullable data)
          {
              StrongSelf(self)
              /* 回调处理 */
              if (error.code != 0)
              {
                  NSLog(@"error:%@",error);
-                 [Tool showHUD:[NSString stringWithFormat:@"%ld %@",error.code,error.localizedDescription] done:NO];
+                 [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%ld ",error.localizedDescription,error.code] done:NO];
              }
              else
              {
@@ -595,7 +594,7 @@
             dispatch_async(dispatch_get_main_queue(), ^{
                 if ([[dic objectForKey:@"ErrorCode"] integerValue] != 100000)
                 {
-                    [Tool showHUD:[dic objectForKey:@"Msg"] done:NO];
+                    [Tool showHUD:[NSString stringWithFormat:@"错误信息：%@\n错误码：%@",[dic objectForKey:@"Msg"],[dic objectForKey:@"ErrorCode"]] done:NO];
                 }
                 else
                 {

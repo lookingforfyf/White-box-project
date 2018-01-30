@@ -16,18 +16,15 @@
 
 @interface NIST_GCDErrorManager : NSObject
 
-/* 服务器定义错误信息 */
-#define NIST_REQUEST_TIMEOUT                @"请求超时"
+/* 定义错误信息 */
+#define NIST_SOCKET_IS_NOT_CONNECTED        @"socket未连接"
 #define NIST_REQUEST_PARAM_ERROR            @"入参错误"
 #define NIST_REQUEST_ERROR                  @"请求失败"
 #define NIST_SERVER_MAINTENANCE_UPDATES     @"用户状态丢失"
-#define NIST_AUTHAPPRAISAL_FAILED           @"Token 失效"
-
-/* SDK内定义错误信息 */
+#define NIST_AUTHAPPRAISAL_FAILED           @"Token失效"
 #define NIST_NETWORK_DISCONNECTED           @"网络断开"
 #define NIST_LOCAL_REQUEST_TIMEOUT          @"本地请求超时"
 #define NIST_XML_PARSE_ERROR                @"XML 解析错误"
-#define NIST_LOCAL_PARAM_ERROR              @"本地入参错误"
 
 
 /**

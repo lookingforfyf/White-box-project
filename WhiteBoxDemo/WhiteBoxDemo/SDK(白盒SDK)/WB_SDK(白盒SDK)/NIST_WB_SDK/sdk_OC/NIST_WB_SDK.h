@@ -17,10 +17,6 @@
 typedef void(^success)(NSDictionary * data);
 typedef void(^failure)(NSDictionary * error);
 
-#pragma mark - sdk_C头文件
-#import "NIST_WB_SDK_Header.h"
-#import "NIST_WB_SDK_Model.h"
-
 #pragma mark - 分隔符
 #define SPLIT_CHAR          @"\n";                                                               /* 分隔符(填充数据时用) */
 #define SPLIT               @"\n"                                                                /* 分割数据 */
@@ -238,8 +234,8 @@ typedef void(^failure)(NSDictionary * error);
 #define NIST_SECRET_KEY_NEGOTIATION_SM4_DECRYPTION_FAILED                         100044                    /* 秘钥协商SM4解密失败 */
 #define NIST_SECRET_KEY_NEGOTIATION_SM4_DECRYPTION_FAILED_MSG                     @"秘钥协商SM4解密失败"
 
-#define NIST_SECRET_KEY_NEGOTIATION_AUTHENTICATION_RETURNED_TOKEN_ERROR           100045                    /* 秘钥协商认证返回的token错误 */
-#define NIST_SECRET_KEY_NEGOTIATION_AUTHENTICATION_RETURNED_TOKEN_ERROR_MSG       @"秘钥协商认证返回的token错误"
+#define NIST_BZWKEY_CALCULATE_ERROR                                               100045                    /* 秘钥协商认证返回的token错误 */
+#define NIST_BZWKEY_CALCULATE_ERROR_MSG                                           @"bZW_KEY计算错误"
 
 #define NIST_CALCULATE_ZW_ERROR                                                   100046                    /* zw计算出错 */
 #define NIST_CALCULATE_ZW_ERROR_MSG                                               @"zw计算出错"

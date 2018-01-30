@@ -271,6 +271,7 @@ static NIST_Read_Write * nist_read_write = nil;
     return value;
 }
 
+#pragma mark - SESSION_ID
 - (NSString *)session_id
 {
     /* 字典判空 */

@@ -12,53 +12,19 @@
  1.本地算法产生一个唯一标示（用来代替设备唯一标识）
  ***********************************************/
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-
-extern NSString * const NIST_UUIDsOfUserDevicesDidChangeNotification;
 
 @interface NIST_UUID : NSObject
-{
-    NSMutableDictionary * _uuidForKey;
-    NSString            * _uuidForSession;
-    NSString            * _uuidForInstallation;
-    NSString            * _uuidForVendor;
-    NSString            * _uuidForDevice;
-    NSString            * _uuidsOfUserDevices;
-    BOOL                  _uuidsOfUserDevices_iCloudAvailable;
-}
+#pragma mark -
+/**
+ 获取并保存UUID
+ 
+ @return UUID
+ */
++ (NSString *)obtainUUID;
 
-+ (NSString *)uuid;
-
-+ (NSString *)uuidForKey:(id<NSCopying>)key;
-
-+ (NSString *)uuidForSession;
-
-+ (NSString *)uuidForInstallation;
-
-+ (NSString *)uuidForVendor;
-
-+ (NSString *)uuidForDevice;
-
-+ (NSString *)uuidForDeviceMigratingValue:(NSString *)value
-                          commitMigration:(BOOL)commitMigration;
-
-+ (NSString *)uuidForDeviceMigratingValueForKey:(NSString *)key
-                                commitMigration:(BOOL)commitMigration;
-
-+ (NSString *)uuidForDeviceMigratingValueForKey:(NSString *)key
-                                        service:(NSString *)service
-                                commitMigration:(BOOL)commitMigration;
-
-+ (NSString *)uuidForDeviceMigratingValueForKey:(NSString *)key
-                                        service:(NSString *)service
-                                    accessGroup:(NSString *)accessGroup
-                                commitMigration:(BOOL)commitMigration;
-
-+ (NSArray *)uuidsOfUserDevices;
-
-+ (NSArray *)uuidsOfUserDevicesExcludingCurrentDevice;
-
-+ (BOOL)uuidValueIsValid:(NSString *)uuidValue;
-
-
+#pragma mark -
+/**
+ 删除UUID
+ */
+- (void)deleteUUID;
 @end
